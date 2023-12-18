@@ -93,7 +93,7 @@ export const ManageBrand = () => {
                                                         <th scope="col">ID</th>
                                                         <th scope="col">Name</th>
                                                         <th scope="col">Description</th>
-                                                        <th scope="col">Feature</th>
+                                                        {/* <th scope="col">Feature</th> */}
                                                         <th scope="col">Actions</th>
                                                     </tr>
                                                 </thead>
@@ -104,7 +104,7 @@ export const ManageBrand = () => {
                                                                 <td>{item?.id}</td>
                                                                 <td>{item.name}</td>
                                                                 <td>{item.description}</td>
-                                                                <td>{item.is_featured}</td>
+                                                                {/* <td>{item.is_featured}</td> */}
                                                                 <td>
                                                                     <Link to={`/${ROUTES.BRAND_UPDATE}/${item?.id}`}><i className="bi bi-pen"></i></Link>
                                                                     <Link onClick={() => { setPharmacyDeleteEvent(item?.id) }} data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="bi bi-trash3"></i></Link>

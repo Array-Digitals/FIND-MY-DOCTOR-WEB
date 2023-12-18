@@ -40,7 +40,7 @@ export const UpdateBrandForm = () => {
         getSingleBrand(brandId).then((res) => {
             const response = res.data.data[0]
             setBrandImage(response.logo)
-            const {logo,...data} = response 
+            const { logo, ...data } = response
             setBrandData(data)
         }).catch((err) => {
             console.log(err, 'error');
@@ -49,9 +49,9 @@ export const UpdateBrandForm = () => {
     const formSubmit = (e) => {
         e.preventDefault();
         let BrandSubmit;
-        if(logo){
+        if (logo) {
             BrandSubmit = { ...brandData, logo, is_featured, id: brandId }
-        }else{
+        } else {
             BrandSubmit = { ...brandData, is_featured, id: brandId }
         }
         console.log(BrandSubmit)
@@ -129,7 +129,8 @@ export const UpdateBrandForm = () => {
                                                     <input type="text" id='doctorName' name='description' placeholder={brandData.description} onChange={getLoginInput} />
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 ">
+                                            
+                                            {/* <div className="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 ">
                                                 <div className="fields">
                                                     <div className="toggleInner">
                                                         Feature
@@ -141,7 +142,7 @@ export const UpdateBrandForm = () => {
                                                         </label>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> */}
 
                                             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
                                                 <div className="fields">
