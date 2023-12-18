@@ -4,10 +4,12 @@ import { ROUTES } from '../utils/Routes';
 import { toast } from 'react-toastify';
 import tokenService from './tokenService';
 import { baseUrl } from './contants';
+import axiosService from './axiosInterceptor';
 
 const AuthService = () => {
   const { userToken, setUserObject, clearToken, clearToken1 } = tokenService();
   const navigate = useNavigate();
+  const {axios} = axiosService();
 
   // const baseUrl = 'https://fmd.arraydigitals.com/api';
 

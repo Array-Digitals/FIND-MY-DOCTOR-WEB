@@ -114,7 +114,7 @@ export const DoctorForm = () => {
     setIsLoading(true);
     doctorRegister(DoctorRegister)
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
         toast.success("Doctor Added");
         formRef.current.reset();
         setChips([]);

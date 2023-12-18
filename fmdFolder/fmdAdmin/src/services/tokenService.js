@@ -8,7 +8,7 @@ const TokenService = () => {
         localStorage.setItem("token", JSON.stringify(token));
     }
     const getToken = () => {
-        const getToken =  localStorage.getItem("token");
+        const getToken = localStorage.getItem("token");
         return getToken
     }
 

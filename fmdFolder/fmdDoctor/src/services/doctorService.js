@@ -3,9 +3,12 @@ import { ROUTES, ROUTING } from "../utils/Routes";
 import axios from 'axios'
 import TokenService from "./tokenService";
 import { baseUrl } from "./contants";
+import axiosService from "./axiosInterceptor";
 
 const DoctorService = () => {
     const { getToken } = TokenService();
+    const { axios } = axiosService();
+
 
     const token = getToken()
     let newToken = token.slice(1, -1);
@@ -86,7 +89,7 @@ const DoctorService = () => {
         };
         return axios.request(config)
     }
-  
+
     const getSingleType = (id) => {
         let config = {
             method: 'get',
@@ -116,7 +119,7 @@ const DoctorService = () => {
         };
         return axios.request(config)
     }
-    return {getDoctorReviews, getBookingDetails, getDoctorSingle, updateDoctor, getHistoryAppointment, getActiveAppointment, getSpecialist, getSingleSpecialist, getSingleType, getDoctorType }
+    return { getDoctorReviews, getBookingDetails, getDoctorSingle, updateDoctor, getHistoryAppointment, getActiveAppointment, getSpecialist, getSingleSpecialist, getSingleType, getDoctorType }
 }
 
 export default DoctorService

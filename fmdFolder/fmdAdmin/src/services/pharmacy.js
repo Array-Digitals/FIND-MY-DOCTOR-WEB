@@ -1,10 +1,13 @@
 import axios from "axios";
 import TokenService from "./tokenService";
 import { baseUrl } from "./baseUrl";
+import axiosService from "./axiosInterceptor";
 
 
 const pharmacyService = () => {
     const { getToken } = TokenService();
+    const { axios } = axiosService()
+
     // const baseUrl = 'https://fmd.arraydigitals.com/api';
     // const baseUrl = 'http://192.168.18.96:3000/api';
 

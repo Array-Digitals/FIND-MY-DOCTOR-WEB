@@ -1,9 +1,13 @@
 import axios from 'axios'
 import TokenService from './tokenService';
 import { baseUrl } from "./baseUrl";
+import axiosService from './axiosInterceptor';
 
 
 const AdminService = () => {
+    const { axios } = axiosService()
+
+
     const { getToken } = TokenService();
     // const baseUrl = 'https://fmd.arraydigitals.com/api';
     const token = getToken()
@@ -52,7 +56,7 @@ const AdminService = () => {
         return axios.request(config)
     }
 
-    const deleteTest = (data) =>{
+    const deleteTest = (data) => {
         let config = {
             method: 'delete',
             maxBodyLength: Infinity,
@@ -66,7 +70,7 @@ const AdminService = () => {
 
         return axios.request(config)
     }
-    const getSingleAdmin = (id) =>{
+    const getSingleAdmin = (id) => {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
@@ -78,7 +82,7 @@ const AdminService = () => {
         };
         return axios.request(config)
     }
-    const getUserMeta = (id) =>{
+    const getUserMeta = (id) => {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
@@ -158,7 +162,7 @@ const AdminService = () => {
         };
         return axios.request(config)
     }
-    const getSingleSpecialistCategory = (id) =>{
+    const getSingleSpecialistCategory = (id) => {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
@@ -615,8 +619,8 @@ const AdminService = () => {
         return axios.request(config)
     }
 
-    
-    const deleteTestFromLab = (data) =>{
+
+    const deleteTestFromLab = (data) => {
         let config = {
             method: 'delete',
             maxBodyLength: Infinity,

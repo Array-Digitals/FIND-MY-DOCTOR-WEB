@@ -4,10 +4,13 @@ import { ROUTES } from "../utils/Routes";
 import { toast } from "react-toastify";
 import TokenService from "./tokenService";
 import { baseUrl } from "./baseUrl";
+import axiosService from "./axiosInterceptor";
 
 const AuthService = () => {
   const { userToken, setUserObject } = TokenService();
   const navigate = useNavigate();
+  const { axios } = axiosService()
+
 
   const { getToken } = TokenService();
   const token = getToken()

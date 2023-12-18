@@ -3,13 +3,16 @@ import { ROUTES, ROUTING } from "../utils/Routes";
 import axios from 'axios'
 import TokenService from "./tokenService";
 import { baseUrl } from "./contants";
+import axiosService from "./axiosInterceptor";
 
 const DashboardService = () => {
     const { getToken } = TokenService();
+    const { axios } = axiosService();
+
 
     const token = getToken()
     let newToken = token.slice(1, -1);
- 
+
     const getTotalPatients = (id) => {
         let config = {
             method: 'get',

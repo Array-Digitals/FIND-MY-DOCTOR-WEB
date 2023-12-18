@@ -1,6 +1,7 @@
 import axios from "axios";
 import TokenService from "./tokenService";
 import { baseUrl } from "./baseUrl";
+import axiosService from "./axiosInterceptor";
 
 
 const insuranceService = () => {
@@ -9,6 +10,8 @@ const insuranceService = () => {
     // const baseUrl = 'http://192.168.18.96:3000/api';
     const token = getToken()
     let newToken = token.slice(1, -1);
+    const { axios } = axiosService()
+
 
 
     const insurancePlanPost = data => {
