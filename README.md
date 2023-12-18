@@ -1,7 +1,7 @@
 # Getting Started with Find My Doctor App
  
 ## step 1
-git clone https://github.com/Array-Digitals/FINDMYDOCTOR_WEB.git
+git clone https://github.com/Array-Digitals/FIND-MY-DOCTOR-WEB.git
 
 ## step 2
 Open IDE terminal, write 'npm i'
