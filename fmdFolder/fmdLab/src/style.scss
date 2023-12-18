@@ -1,0 +1,775 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@mixin redButton {
+    display: block;
+    width: 150px;
+    background-color: #e92b2b;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 40px;
+    position: relative;
+    // background-image: url(assets/images/buttonBackground.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    background-position: -110px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 999;
+    transition: all 0.3s;
+    padding: 20px;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 20px rgb(1 41 112 / 10%);
+    background-color: #fff;
+
+}
+
+.sidebarwidth {
+    width: 0;
+    display: none;
+    transition: all 0.3s;
+}
+
+.sideBarInner {
+    overflow-x: hidden;
+    position: relative;
+
+    .aSideCloseButton {
+        position: absolute;
+        right: 0;
+        display: none;
+        top: 0;
+
+        button {
+            background-color: rgba(255, 0, 0, 0);
+            font-size: 18px;
+        }
+    }
+
+    .LogoImage {
+        padding-bottom: 20px;
+    }
+
+    .sidebar-nav {
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #aab7cf transparent;
+
+        .nav-item {
+            margin-bottom: 5px;
+
+            .nav-link {
+                display: flex;
+                align-items: center;
+                font-size: 15px;
+                font-weight: 600;
+                transition: all 0.3;
+                padding: 10px 15px;
+                border-radius: 4px;
+                // color: black;
+                // background-color: #e92b2bce;
+
+                span {
+                    // color: #e92b2b;
+                    color: #aa97b0;
+                    font-size: 17px;
+                }
+
+                .sideIcon {
+                    font-size: 23px;
+                    margin-right: 30px;
+                    color: #aa97b0;
+
+                }
+
+                .ms-auto {
+                    font-size: 12px;
+                    margin-right: 10px;
+                    color: #aa97b0;
+                }
+            }
+            .nav-content {
+                list-style: none;
+                padding-left: 4rem;
+                a {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #e92b2bce;
+                    padding: 10px 0 10px 10px;
+                    transition: all 0.3s;
+    
+                    i {
+                        font-size: 15px;
+                        margin-right: 8px;
+                        line-height: 0;
+                        border-radius: 50%;
+                    }
+                }
+    
+            }
+    
+            .li {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+
+            .collapsed {
+                background-color: white;
+
+                span {
+                    color: #aa97b0;
+                }
+
+                .sideIcon {
+                    color: #aa97b0;
+                }
+            }
+
+            .active {
+                background-color: #e92b2b;
+                border-radius: 10px;
+
+                .sideIcon {
+                    color: white;
+                }
+
+                span {
+                    color: white;
+                }
+
+
+
+            }
+
+        }
+
+    }
+
+}
+
+.AppFull {
+    // background-color: #e8ebf046;
+    margin-left: 0;
+    transition: all 0.3s;
+
+}
+
+.App {
+
+    margin-left: 300px;
+    transition: all 0.3s;
+
+}
+
+header {
+    .headerInner {
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navRight {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            .notificationDropDown {
+
+                .dropdown-toggle {
+                    background-color: #e92b2b11;
+                    border: none;
+                    color: #e92b2b;
+                    font-size: 23px;
+                    position: relative;
+
+                    .notificationShow {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+            .profileDropDown {
+                .dropdown-toggle {
+                    background-color: #e92b2b00;
+                    border: none;
+                    color: #e92b2b;
+                    font-size: 23px;
+                    position: relative;
+
+                    img {
+                        border-radius: 10px;
+                        width: 50px;
+                        object-fit: cover;
+                        height: 50px;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                .dropdown-menu {
+                    li {
+                        a {
+                            i {
+                                color: #e92b2b;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .aboutDoctor {
+                text-align: right;
+
+                .doctorName {
+                    color: #e92b2b;
+                    font-weight: 600;
+                }
+
+                .doctorSpeciality {
+                    color: #aa97b0;
+                }
+            }
+        }
+
+        .menuButton {
+            background-color: #aa97b000;
+            color: #e92b2b;
+            outline: none;
+
+            i {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+    .loginHeader {}
+
+    .loginBody {
+        label {
+            display: block;
+        }
+    }
+}
+
+.mainSection {
+    .mainSectionWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .heading {
+            text-align: left;
+            width: 90%;
+            margin-bottom: 20px;
+
+            p {
+                font-size: 25px;
+                color: #e92b2b;
+                font-weight: 600;
+            }
+        }
+
+        .cardForm {
+            width: 90%;
+
+            .additionForm {
+                .fields {
+                    .profileImage {
+                        display: flex;
+                        justify-content: center;
+                        img {
+                            width: 150px;
+                            object-fit: cover;
+                            height: 150px;
+                            border: 5px solid white;
+                        }
+                    }
+                    label {
+                        display: block;
+                    }
+
+                    input[type='text'],
+                    input[type='email'],
+                    input[type='number'],
+                    input[type='file'],
+                    input[type='time'],
+                    select {
+                        width: 100%;
+                        border: 1px solid rgb(219, 219, 219);
+                        height: 38px;
+                        padding: 6px;
+                        border-radius: 7px;
+
+                        &:focus {
+                            outline: #e92b2b;
+                        }
+                    }
+
+                    button {
+                        @include redButton;
+                    }
+
+                    .availOuter {
+                        display: flex;
+                        justify-content: flex-start;
+                        gap: 40px;
+                        align-items: center;
+
+                        .availInner {
+                            margin-left: 2%;
+                            display: flex;
+                            justify-content: center;
+                            gap: 10px;
+                            align-items: center;
+
+                            input {
+                                accent-color: red;
+                            }
+
+                            .labelDiv {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            img {
+                                width: 35px;
+                            }
+
+                            .moon {
+                                width: 30px;
+                            }
+                        }
+                    }
+
+                    .toggleLabel {
+                        i {
+                            color: #e92b2b;
+                        }
+                    }
+
+                    .toggleButton {
+                        height: 40px;
+                        display: flex;
+
+                        justify-content: center;
+                        flex-direction: column;
+
+                        .switch {
+                            position: relative;
+                            display: inline-block;
+                            width: 54px;
+                            height: 25px;
+                        }
+
+                        .switch input {
+                            opacity: 0;
+                            width: 0;
+                            height: 0;
+                        }
+
+                        .slider {
+                            position: absolute;
+                            cursor: pointer;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: #ccc;
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                        }
+
+                        .slider:before {
+                            position: absolute;
+                            content: "";
+                            height: 18px;
+                            width: 18px;
+                            left: 4px;
+                            bottom: 3.55px;
+                            background-color: white;
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                        }
+
+                        input:checked+.slider {
+                            background-color: #e92b2b;
+                        }
+
+                        input:focus+.slider {
+                            box-shadow: 0 0 1px #e92b2b;
+                        }
+
+                        input:checked+.slider:before {
+                            -webkit-transform: translateX(28px);
+                            -ms-transform: translateX(28px);
+                            transform: translateX(28px);
+                        }
+
+                        .slider.round {
+                            border-radius: 34px;
+                        }
+
+                        .slider.round:before {
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .chart {
+                .chartHeading {
+                    p {
+                        font-size: 20px;
+                        color: #e92b2b;
+                        font-weight: 600;
+                    }
+
+                    small {
+                        color: grey;
+                    }
+                }
+
+                .box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 80px;
+
+                    .details {
+                        .category {
+                            color: #f13e3e;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+        .doctorAppointments {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .tab {
+                cursor: pointer;
+                padding: 10px 20px;
+                margin: 0px 2px;
+                background: #e92b2b;
+                display: inline-block;
+                color: #fff;
+                border-radius: 3px 3px 0px 0px;
+                box-shadow: 0 0.5rem 0.8rem #0000000c;
+            }
+
+            .panels {
+                background: #fffffff6;
+                box-shadow: 0 2rem 2rem #0000000c;
+                min-height: 200px;
+                width: 100%;
+
+                border-radius: 3px;
+                overflow: hidden;
+                padding: 20px;
+
+                .panel {
+                    display: none;
+                    animation: fadein .8s;
+
+                    .rewardList {
+                        display: flex;
+                        gap: 20px;
+                    }
+
+                    .rewardListClass {
+                        width: 50px;
+                        height: 50px;
+                        margin-bottom: 10px;
+                    }
+
+                    .metaDatasDiv {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+
+                    .metaDatasDiv .metaData {
+                        background-color: rgb(201, 201, 201);
+                        color: white;
+                        padding: 5px 10px;
+                        border-radius: 6px;
+                        margin-bottom: 0;
+                    }
+
+                    .metaButtons {
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 10px;
+                        margin-top: 10px;
+                    }
+                    .metaButtons .viewButton {
+                        color: grey;
+                        // background-color: #02685023;
+                        border-radius: 5px;
+                        border: 1px solid #bbbbbb;
+                    }
+                    .metaButtons .acceptButton {
+                        color: #026851;
+                        background-color: #02685023;
+                        border-radius: 5px;
+                        border: 1px solid #02685091;
+                    }
+
+                    .metaButtons button {
+                        padding: 4px 15px;
+                    }
+
+                    .metaButtons .rejectButton {
+                        color: rgb(202, 0, 0);
+                        background-color: rgba(202, 0, 0, 0.116);
+                        border-radius: 5px;
+                        border: 1px solid rgba(202, 0, 0, 0.5);
+                    }
+                    .list-group{
+                        .list-group-item{
+                            position: relative;
+                            small{
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                color: grey;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+            @keyframes fadein {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+            .panel-title {
+                font-size: 1.5em;
+                font-weight: bold
+            }
+
+            .radio {
+                display: none;
+            }
+
+            #one:checked~.panels #one-panel,
+            #two:checked~.panels #two-panel,
+            #three:checked~.panels #three-panel {
+                display: block
+            }
+
+            #one:checked~.tabs #one-tab,
+            #two:checked~.tabs #two-tab {
+                background: #fffffff6;
+                color: #e92b2b;
+                border-top: 3px solid #e92b2b;
+            }
+        }
+        .appointmentDetails{
+            .mainHeading{
+                font-size: 25px;
+                font-weight: 600;
+            }
+            .mainBody{
+                .mainBodySection{
+                    .subHeading{
+                        margin-top: 20px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #e92b2b;
+                        span{
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+                    }
+                    .testSummary{
+                     
+                        .tesDetails{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer2 {
+
+    margin-top: 30px;
+
+    .footer2Main {
+        width: 90%;
+        color: #e92b2b;
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        padding: 10px;
+        align-items: center;
+
+        .footer2Link {
+            a {
+                color: #e92b2b;
+                text-decoration: none;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .App {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        width: 0;
+        display: none;
+        transition: all 0.3s;
+    }
+
+    .sidebarwidth {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 350px;
+        z-index: 999;
+        transition: all 0.3s;
+        padding: 20px;
+        overflow-x: hidden;
+        box-shadow: 0px 0px 20px rgb(1 41 112 / 10%);
+        background-color: #fff;
+    }
+
+    .sideBarInner {
+        .aSideCloseButton {
+            display: block;
+        }
+
+    }
+
+
+}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (max-width: 768px) {
+    .sidebarwidth {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .sidebar {
+        .sideBarInner {
+            .sidebar-nav {
+                .nav-item {
+                    .nav-link {
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+        .headerInner {
+            .navRight {
+                .aboutDoctor {
+                    display: none;
+                }
+            }
+        }
+    }
+}

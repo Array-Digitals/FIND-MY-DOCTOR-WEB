@@ -1,0 +1,464 @@
+@media only screen and (min-width: 1100px) and (max-width: 1700px) {
+  .App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card {
+    min-width: 250px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main .homePage .homePageInner .aboutPara {
+    padding-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .cartFlexButton {
+    justify-content: center;
+  }
+  .userProfileDiv .dropdown-menu.show li a,
+  .userProfileDiv .dropdown-menu.show li button {
+    padding: 10px 10px !important;
+  }
+  .App main .contactUs .contactSection .contactWrapper .card {
+    width: 100%;
+  }
+  .App main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage {
+    bottom: -45px;
+  }
+  .mobileHeader {
+    display: block !important;
+  }
+  .header .headerInner {
+    justify-content: center !important;
+  }
+  .header .headerInner .headerFirst,
+  .header .headerInner .headerThird,
+  .header .headerInner .userProfileDiv {
+    display: none !important;
+  }
+  .mainHeader {
+    display: none;
+  }
+  .footer .footerMain {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer .footerMain a {
+    color: white;
+    text-decoration: none;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText {
+    padding: 30px 0 0 0 !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage img {
+    width: 280px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Primary {
+    font-size: 35px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Health {
+    font-size: 40px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Service {
+    font-size: 30px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Home {
+    font-size: 30px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .bookButtonOuter {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+  main .homePage .servicesMain .card {
+    margin-bottom: 30px;
+  }
+  main .homePage .employeeSection .employee .employeeAbout {
+    flex-flow: column;
+  }
+  main .homePage .employeeSection .employee .employeeAbout .employeeContactButton {
+    margin-bottom: 30px;
+  }
+  main .homePage .hiringSection .hiringAbout {
+    flex-flow: column;
+  }
+  main .homePage .hiringSection .hiringAbout .hiringContactButton {
+    margin-bottom: 30px;
+  }
+  main .profileMain .profile {
+    flex-direction: column;
+  }
+  main .profileMain .profile .profileSide {
+    width: 100% !important;
+  }
+  main .profileMain .profile .profileSide ul {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+  main .profileMain .profile .profileSide ul li a {
+    display: block;
+    padding: 10px !important;
+  }
+  main .profileMain .profile .profileSide ul li .active {
+    background-color: #eb5757;
+    color: white;
+    display: block;
+    width: auto !important;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .loginForm .sideImageDiv {
+    display: none;
+  }
+  .loginForm .sideImageDiv img {
+    display: none;
+  }
+  .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 100px 0 0 0;
+  }
+  .bookLab .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 100px 0 0 0;
+  }
+  .insurance .insuranceBanner .banner .bannerInner .bannerText {
+    padding: 100px 0 0 0;
+  }
+  .App main .homePage .homePageInner .serviceContainer .servicesmainHeading {
+    top: -100px !important;
+  }
+  .App main .homePage .homePageInner .servicesMain {
+    left: 0 !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .App main .homePage .homePageInner .hiringSection .hiringAbout .hiringText {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .orderDetailsWrapper img {
+    display: none;
+  }
+  .App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeText {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .App .footer .footerForm {
+    padding: 25px 20px;
+  }
+  .App .footer .footerMain h5::after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .App main .homePage .homePageInner .aboutUs .aboutPicOutter .newsImage img {
+    width: 70%;
+  }
+  .App main .homePage .homePageInner .aboutPara .heading {
+    font-size: 40px;
+  }
+  .App main .homePage .homePageInner .aboutPara .heading1 {
+    font-size: 40px;
+    text-align: center;
+    line-height: 110%;
+  }
+  .App main .homePage .homePageInner .newsCarousel .CarouselHeading p {
+    font-size: 40px;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .bookButtonOuter {
+    justify-content: center;
+  }
+  header .header .headerInner {
+    flex-flow: column;
+    width: 100%;
+  }
+  .footer .footerHeader .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText {
+    padding: 30px 0 0 0 !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage {
+    display: none;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage img {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara {
+    width: 100%;
+  }
+  main .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 50px 0 0 0;
+  }
+  main .bookLab .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 50px 0 0 0;
+  }
+  main .insurance .insuranceBanner .banner .bannerInner .bannerText {
+    padding: 50px 0 0 0;
+  }
+  main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profilePhoto {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+  main .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profileDetails {
+    margin-left: 0 !important;
+    margin-top: 87px;
+    text-align: center;
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .App main .cart .productMain .cartBody .cardInner {
+    width: 90%;
+  }
+  .startHeading.startHeading2 {
+    margin-bottom: 20px;
+  }
+  .App .loginForm .login .loginMain .loginInputFields2 .loginInputFields2Inner {
+    flex-direction: column;
+    width: 100%;
+  }
+  .loginMain .inputShowPassword .inputShowPasswordButton {
+    right: 10%;
+  }
+  .App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField input,
+  .App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField textarea,
+  .App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField .passwordButton {
+    margin-left: auto;
+    width: 100%;
+    display: block;
+    width: 90%;
+  }
+  .App main .cart .productMain .cartBody .cardInner .listMain .middle {
+    justify-content: center;
+  }
+  .App .profileMain .profile .profileBody .profileInner form .profileForm {
+    margin-top: 40px;
+  }
+  .doctorAppointments .tabs {
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+  .App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField .passwordButton {
+    padding: 10px;
+    text-align: center;
+  }
+  .App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField3 {
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .App .profileMain .profile .profileBody .profileInner form .profileForm .fields {
+    justify-content: center;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .App .contactUs .contactSection .contactWrapper .cardForm {
+    padding: 20px 20px;
+  }
+  .App .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields button {
+    margin: 0 auto;
+  }
+  .App .aboutUs .ourStory .aboutPara2 .heading,
+  .App .aboutUs .ourStory .aboutPara2 .paragraph,
+  .App .aboutUs .ourStory .aboutPara .paragraph,
+  .App .aboutUs .ourStory .aboutPara .heading {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .productMain {
+    margin-bottom: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .App main .insurance .switchDiv .mainBodyInner .wrapper .appointmentButton {
+    justify-content: center;
+  }
+  .radioButton {
+    margin-bottom: 0 !important;
+  }
+  .App main .insurance .switchDiv .mainBodyInner .rowButton {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .App main .homePage .homePageInner .serviceContainer .activeHeading {
+    top: -70px;
+  }
+  .App main .homePage .homePageInner .aboutPara * {
+    text-align: center;
+    justify-content: center;
+  }
+  .App main .homePage .homePageInner .aboutPara .aboutButton a {
+    margin: 0 auto;
+  }
+  .contactImgClass {
+    display: none;
+  }
+  .App main .bookLab .switchDiv .mainBody {
+    margin-bottom: 20px;
+  }
+  .App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton #selectLocation {
+    width: 80%;
+  }
+  .App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .radioButton {
+    margin-bottom: 0;
+  }
+  .App main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .LabCarousel .LabCarouselInner {
+    margin-bottom: 30px;
+  }
+  .App main .bookLab .switchDiv .mainBody .pagging .wrapper .buttons .buttonRowDiv {
+    gap: 0px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    margin-bottom: 5px;
+  }
+  #myDialog .authFormMain {
+    margin: 20px 10px !important;
+  }
+  #myDialog .googleButton {
+    width: 100%;
+  }
+  #myDialog .authFieldsInner {
+    flex-direction: column;
+  }
+  #myDialog .linkedInButton {
+    width: 100%;
+  }
+  #myDialog .mainForm .allForms {
+    width: 80%;
+  }
+  #myDialog .firstRowRadio {
+    flex-wrap: wrap;
+  }
+  #myDialog .dialogInner h1 {
+    font-size: 30px;
+  }
+  .profileWrapper .body {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .profileWrapper .body .card::after {
+    left: 0 !important;
+  }
+  .App .login {
+    padding: 15px;
+  }
+  main .loginInputFields2 {
+    width: 80%;
+    flex-direction: column;
+  }
+  main .loginInputFields2 input {
+    width: 100% !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText {
+    padding: 30px 0 0 0 !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .doctorImage img {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Primary {
+    font-size: 35px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Health {
+    font-size: 40px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Service {
+    font-size: 30px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .Home {
+    font-size: 30px !important;
+  }
+  main .homePage .homePageInner .banner .bannerInner .bannerText .bannerInfo .bannerPara .bookButtonOuter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  main .homePage .homePageInner .serviceContainer .servicesmainHeading {
+    font-size: 30px !important;
+    text-align: center;
+  }
+  main .homePage .homePageInner .servicesMain .cardsCenterMob {
+    width: 70%;
+  }
+  main .homePage .homePageInner .servicesMain .cardsCenterMob .card {
+    margin-bottom: 30px;
+  }
+  main .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 70px 0 0 0;
+  }
+  main .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText .bannerInfo p {
+    font-size: 40px;
+  }
+  main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker {
+    width: 70% !important;
+  }
+  main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+    width: 1.5rem !important;
+    font-size: 15px !important;
+  }
+  main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+    font-size: 15px !important;
+    width: 1.5rem !important;
+  }
+  main .bookLab .bookDoctorBanner .banner .bannerInner .bannerText, main .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText {
+    padding: 70px 0 0 0;
+  }
+  main .bookLab .bookDoctorBanner .banner .bannerInner .bannerText .bannerInfo p, main .bookDoctor .bookDoctorBanner .banner .bannerInner .bannerText .bannerInfo p {
+    font-size: 40px;
+  }
+  main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .TimePickerDivInner, main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .TimePickerDivInner {
+    max-width: 295px;
+  }
+  main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week, main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week {
+    height: 35px;
+  }
+  main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day, main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+    font-size: 16px;
+    width: 35px;
+  }
+  main .bookLab .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name, main .bookDoctor .switchDiv .mainBody .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+    width: 35px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  main .insurance .insuranceBanner .banner .bannerInner .bannerText {
+    padding: 70px 0 0 0;
+  }
+  main .insurance .insuranceBanner .banner .bannerInner .bannerText .bannerInfo p {
+    font-size: 25px;
+  }
+  main .loginForm .loginOther > div {
+    width: 100% !important;
+  }
+  main .loginForm .loginOther {
+    flex-direction: column;
+    justify-content: center !important;
+  }
+  main .loginForm .loginOther button {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .App .footer2 .footer2Main {
+    font-size: 8px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

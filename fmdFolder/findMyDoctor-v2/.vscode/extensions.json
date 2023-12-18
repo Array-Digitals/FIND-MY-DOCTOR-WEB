@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "devsense.intelli-php-vscode",
+        "ms-vscode-remote.remote-wsl"
+    ]
+}

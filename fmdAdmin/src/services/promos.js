@@ -1,12 +1,14 @@
 import axios from "axios";
 import TokenService from "./tokenService";
 import { baseUrl } from "./baseUrl";
+import AxiosSettings from "./axiosInterceptor";
 
 
 const promoServices = () => {
     const { getToken } = TokenService();
     const token = getToken()
     let newToken = token.slice(1, -1);
+    const { axios } = AxiosSettings();
 
 
     const getPromoCode = () => {

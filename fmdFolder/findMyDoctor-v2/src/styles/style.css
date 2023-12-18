@@ -1,0 +1,5537 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.mobileNavIcon {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+}
+.mobileNavIcon .iconOutter {
+  text-decoration: none;
+  color: #eb5757;
+  font-size: 20px;
+  border-bottom: none !important;
+}
+
+.LoaderMain {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../assets/images/arrowBackground.png");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: right 15px center;
+}
+
+@font-face {
+  font-family: "poppinRegular";
+  src: url("/src/assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinMedium";
+  src: url("/src/assets/fonts/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinSemiBold";
+  src: url("/src/assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinBold";
+  src: url("/src/assets/fonts/Poppins-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinExtraBold";
+  src: url("/src/assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+}
+.loadingMain {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  font-family: "poppinRegular";
+}
+.App .mainBodySection .subHeading .buttonOuter {
+  border: none;
+}
+.App .orderDetailsWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+.App .orderDetailsWrapper img {
+  width: 180px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App .mainItemInfo .radioButton input {
+  display: none;
+}
+.App .mainItemInfo .radioButton label {
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.App .mainItemInfo .radioButton label:hover {
+  background-color: #e7e7e7;
+}
+.App .mainItemInfo .radioButton input:checked + label {
+  background-color: #eb5757;
+  color: white;
+}
+.App div > a {
+  transition: scale 0.2s ease-in-out;
+}
+.App div > a:hover {
+  scale: 1.02;
+}
+.App header .header {
+  background-color: #eb5757;
+  color: #fff;
+}
+.App header .header .headerInner {
+  display: flex;
+  row-gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 5px 0;
+}
+.App header .header .headerInner .headerFirst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.App header .header .headerInner .headerFirst .iconOutter {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 8px 5px 8px;
+}
+.App header .header .headerInner .headerFirst .iconOutter:hover {
+  background-color: #eb5757;
+}
+.App header .header .headerInner .headerSecond {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.App header .header .headerInner .headerThird {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+}
+.App header .header .headerInner .headerThird a {
+  color: white;
+  text-decoration: none;
+}
+.App header .header .headerInner .userProfileDiv .dropdown button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+.App header .mainHeader {
+  position: relative;
+  z-index: 2;
+}
+.App header .mainHeader .headerContainer {
+  position: relative;
+}
+.App header .mainHeader .headerContainer .headerInner {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px 15px 50px;
+  background-color: rgba(255, 255, 255, 0.904);
+  border-radius: 0 0 40px 40px;
+  width: 100%;
+}
+.App header .mainHeader .headerContainer .headerInner .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.App header .mainHeader .headerContainer .headerInner .menu .menuInner {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.App header .mainHeader .headerContainer .headerInner .menu .menuInner a {
+  color: black;
+  text-decoration: none;
+}
+.App header .mainHeader .headerContainer .headerInner .menu .shoppingButton {
+  background-color: #eb5757;
+  height: 36px;
+  width: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 50%;
+}
+.App header .mainHeader .headerContainer .headerInner .menu .shoppingButton a {
+  color: white;
+  text-decoration: none;
+}
+.App header .mainHeader .headerContainer .stickyHeader {
+  position: fixed;
+  top: 0;
+  max-width: 1320px;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  width: 87%;
+  min-width: 960px;
+  background-color: white;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.App header .mobileHeader {
+  display: none;
+}
+.App header .mobileHeader li a {
+  padding: 15px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+.App header .mobileHeader .userProfileDiv .dropdown .btn-secondary {
+  background-color: #eb5757;
+  border: none;
+}
+.App .navbar-toggler:focus {
+  box-shadow: none;
+}
+.App .navbar-toggler {
+  border: none;
+}
+.App .footer {
+  background-color: #1e1428;
+}
+.App .footer hr {
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App .footer .footerForm {
+  color: white;
+  font-size: 11px;
+  padding: 25px 50px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.24);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App .footer .footerForm .footerFormWrapper .para1 {
+  font-family: "poppinBold";
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.App .footer .footerForm .footerFormWrapper .para1 span {
+  color: #eb5757;
+}
+.App .footer .footerForm .footerInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .footer .footerForm .footerInput .footerBorder {
+  border-bottom: 1px solid white;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.App .footer .footerForm .footerInput .footerBorder input {
+  width: 90%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  outline: none;
+  padding: 10px;
+}
+.App .footer .footerForm .footerInput .footerBorder button {
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0);
+  color: #eb5757;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.App .footer .footerMain {
+  color: white;
+  margin-bottom: 20px;
+}
+.App .footer .footerMain h5 {
+  font-family: "poppinBold";
+  position: relative;
+  margin-bottom: 30px;
+}
+.App .footer .footerMain h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  height: 4px;
+  background-color: #eb5757;
+  width: 80px;
+}
+.App .footer .footerMain p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.App .footer .footerMain a {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+}
+.App .footer .footerMain .linkFlex {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.App .footer .footerHeader {
+  margin-bottom: 30px;
+}
+.App .footer .footerHeader .footerImg {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.App .footer .footerHeader .col-12:has(.list),
+.App .footer .footerHeader .col-12:has(.icons) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+.App .footer .footerHeader .list {
+  display: flex;
+  justify-content: center;
+}
+.App .footer .footerHeader .list a {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.App .footer .footerHeader .icons {
+  display: flex;
+  justify-content: center;
+}
+.App .footer .footerHeader .icons a {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  height: 30px;
+  width: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+.App .footer .footerHeader .icons a:hover {
+  background-color: #eb5757;
+}
+.App .footer2 {
+  background-color: #eb5757;
+}
+.App .footer2 .footer2Main {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 10px;
+  align-items: center;
+}
+.App .footer2 .footer2Main .footer2Link a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.App .columnForDateTimeChooser {
+  width: 100%;
+}
+.App main .slick-slider img {
+  display: block;
+  width: 100%;
+}
+.App main .banner .bannerInner {
+  border-bottom: 5px solid #eb5757;
+}
+.App main .banner .bannerInner picture {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.App main .banner .bannerInner picture img {
+  width: 100%;
+}
+.App main .homePage .homePageInner {
+  overflow-x: hidden;
+}
+.App main .homePage .homePageInner .serviceContainer {
+  position: relative;
+}
+.App main .homePage .homePageInner .serviceContainer .servicesmainHeading {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 35%;
+  transition: all 1s ease-in-out;
+}
+.App main .homePage .homePageInner .serviceContainer .servicesmainHeading span {
+  color: #eb5757;
+}
+.App main .homePage .homePageInner .serviceContainer .activeHeading {
+  top: -100px;
+}
+.App main .homePage .homePageInner .servicesMain {
+  margin-top: 115px;
+  position: relative;
+  left: 150%;
+  transition: all 1s ease-in-out;
+}
+.App main .homePage .homePageInner .servicesMain .redCard {
+  background-color: white;
+  border: 1px solid rgb(190, 190, 190);
+  color: #eb5757;
+  transition: all 0.5s;
+}
+.App main .homePage .homePageInner .servicesMain .redCard:hover {
+  background-color: #eb5757;
+  color: white;
+}
+.App main .homePage .homePageInner .servicesMain .redCard:hover .serviceBody .cardButton a {
+  background-color: white;
+  color: #eb5757;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .cardImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .cardImage img {
+  width: 70%;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .para {
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .para .cardHeading {
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .para .cardPara {
+  font-size: 12px;
+  text-align: center;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .cardButton {
+  display: flex;
+  justify-content: center;
+}
+.App main .homePage .homePageInner .servicesMain .redCard .serviceBody .cardButton a {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard {
+  background-color: white;
+  border: 1px solid rgb(190, 190, 190);
+  color: #eb5757;
+  transition: all 0.5s ease-in-out;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard:hover {
+  background-color: #eb5757;
+  color: white;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard:hover .serviceBody .cardButton a {
+  background-color: white;
+  color: #eb5757;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .cardImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .cardImage img {
+  width: 70%;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .para {
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .para .cardHeading {
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .para .cardPara {
+  font-size: 12px;
+  text-align: center;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .cardButton {
+  display: flex;
+  justify-content: center;
+}
+.App main .homePage .homePageInner .servicesMain .blackCard .serviceBody .cardButton a {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .homePage .homePageInner .active {
+  left: 0;
+}
+.App main .homePage .homePageInner .aboutUs {
+  background-color: #fffff9;
+  padding-top: 50px;
+}
+.App main .homePage .homePageInner .aboutUs .aboutPicOutter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.App main .homePage .homePageInner .aboutUs .aboutPicOutter img {
+  width: 70%;
+}
+.App main .homePage .homePageInner .aboutUs .aboutPicOutter .newsImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .homePage .homePageInner .aboutUs .aboutPicOutter .newsImage img {
+  width: 350px;
+}
+.App main .homePage .homePageInner .aboutPara {
+  padding-right: 80px;
+  margin-bottom: 40px;
+}
+.App main .homePage .homePageInner .aboutPara .slick-next:before,
+.App main .homePage .homePageInner .aboutPara .slick-prev:before {
+  color: #f13e3e !important;
+}
+.App main .homePage .homePageInner .aboutPara .heading {
+  font-size: 50px;
+  display: flex;
+  gap: 5px;
+}
+.App main .homePage .homePageInner .aboutPara .heading .colored {
+  color: #eb5757;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .aboutPara .heading1 {
+  font-size: 50px;
+}
+.App main .homePage .homePageInner .aboutPara .heading1 span {
+  color: #eb5757;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .aboutPara .heading2 {
+  font-family: "poppinSemiBold";
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .aboutPara .heading2 span {
+  color: #eb5757;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard {
+  padding: 16px;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card {
+  border: none;
+  box-shadow: 0px 0 20px 1px rgba(1, 41, 112, 0.1);
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .para .cardHeading {
+  font-family: "poppinBold";
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .para .cardPara {
+  font-family: "poppinSemiBold";
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .userReview {
+  width: 80%;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .userReview .cardHeading {
+  font-family: "poppinBold";
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .userReview .cardPara {
+  font-family: "poppinRegular";
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #eb5757;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .rightSide {
+  width: 20%;
+  position: relative;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .rightSide img {
+  width: 30px;
+}
+.App main .homePage .homePageInner .aboutPara .newsCard .card .serviceBody .userReviewOuter .rightSide a {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  bottom: -45px;
+  width: 135px;
+  right: -10px;
+  border-radius: 10px;
+  position: absolute;
+}
+.App main .homePage .homePageInner .aboutPara .paragraph {
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+.App main .homePage .homePageInner .aboutPara .aboutButton a {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 155px;
+}
+.App main .homePage .homePageInner .employeeSection {
+  background-image: url(../assets/images/homepage/employeeBackgroundImg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeText {
+  padding-bottom: 60px;
+  color: white;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeText .heading {
+  font-family: "poppinBold";
+  font-size: 40px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeText p {
+  font-size: 12px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeAbout .employeeContactButton a {
+  display: block;
+  width: 150px;
+  background-color: #1e1729;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 160px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter {
+  display: flex;
+  justify-content: center;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  padding: 30px 0px;
+  width: 190px;
+  text-align: center;
+  box-shadow: 0px 0 40px 1px rgba(1, 41, 112, 0.1);
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble:hover {
+  background: linear-gradient(to top, #eb5757, #1e1729);
+  color: white;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .heading {
+  font-family: "poppinExtraBold";
+  font-size: 25px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble p {
+  font-size: 14px;
+  font-family: "poppinSemiBold";
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage i {
+  color: black;
+  font-size: 30px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage img {
+  width: 40px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage1 img {
+  width: 30px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage2 {
+  padding: 6px;
+}
+.App main .homePage .homePageInner .employeeSection .employee .employeeBubbleDiv .bubbleOuter .bubble .bubbleImage2 img {
+  width: 39px;
+}
+.App main .homePage .homePageInner .newsCarousel {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.App main .homePage .homePageInner .newsCarousel .CarouselHeading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.App main .homePage .homePageInner .newsCarousel .CarouselHeading p {
+  font-size: 50px;
+}
+.App main .homePage .homePageInner .newsCarousel .CarouselHeading p span {
+  color: #eb5757;
+  font-family: "poppinExtraBold";
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner img {
+  filter: grayscale(100%);
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner img:hover {
+  filter: grayscale(0);
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img {
+  filter: grayscale(100%);
+}
+.App main .homePage .homePageInner .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img:hover {
+  filter: grayscale(0);
+}
+.App main .homePage .homePageInner .hiringSection {
+  background-image: url(../assets/images/homepage/hiringBackground.png);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout .hiringText {
+  padding-bottom: 60px;
+  color: white;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout .hiringText .heading {
+  font-family: "poppinBold";
+  font-size: 40px;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout .hiringText p {
+  font-size: 12px;
+}
+.App main .homePage .homePageInner .hiringSection .hiringAbout .hiringContactButton a {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 160px;
+}
+.App main .bookingConfirmationFormOuter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.App main .bookingConfirmationFormOuter .bookingConfirmButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.App main .bookingConfirmationFormOuter .bookingConfirmButton button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .bookingConfirmationFormOuter .bookingConfirmationForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.App main .bookingConfirmationFormOuter .bookingConfirmationForm .bookingFormFields {
+  width: 100%;
+  max-width: 400px;
+}
+.App main .bookingConfirmationFormOuter .bookingConfirmationForm .bookingFormFields label,
+.App main .bookingConfirmationFormOuter .bookingConfirmationForm .bookingFormFields input {
+  display: block;
+}
+.App main .bookingConfirmationFormOuter .bookingConfirmationForm .bookingFormFields select,
+.App main .bookingConfirmationFormOuter .bookingConfirmationForm .bookingFormFields input {
+  width: 100%;
+  background-color: white;
+  color: #eb5757;
+  border: 1px solid #eb5757;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+.App main .bookingConfirmationFormOuter .bookingConfirmationForm .bookingFormFields p {
+  background-color: rgba(235, 87, 87, 0.1803921569);
+  color: #eb5757;
+  border: 1px solid #eb5757;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+.App main .pagging .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-end;
+}
+.App main .pagging .wrapper .progressBar {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.App main .pagging .wrapper .progressBar progress {
+  color: lightblue;
+  width: 150px;
+  height: 4px;
+}
+.App main .pagging .wrapper .progressBar progress::-moz-progress-bar {
+  background: #eb5757;
+}
+.App main .pagging .wrapper .progressBar progress::-webkit-progress-value {
+  background: #eb5757;
+}
+.App main .pagging .wrapper .progressBar progress::-webkit-progress-bar {
+  background: rgba(235, 87, 87, 0.2117647059);
+}
+.App main .pagging .wrapper .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.App main .pagging .wrapper .buttons .buttonRowDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.App main .pagging .wrapper .buttons button {
+  background-color: #eb5757;
+  color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App main .pagging .wrapper .buttons .backButton {
+  background-color: white;
+  color: #eb5757;
+  border: 1px solid #eb5757;
+  padding: 7px 10px;
+}
+.App main .pagging .wrapper .buttons .nextButton:disabled {
+  opacity: 0.25;
+}
+.App main .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content {
+  width: 100%;
+}
+.App main .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  font-family: "poppinMedium";
+  font-size: 30px;
+  position: relative;
+}
+.App main .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header button {
+  width: 5px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  right: 20px;
+}
+.App main .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .header span {
+  font-family: "poppinBold";
+  color: #eb5757;
+}
+.App main .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body {
+  display: flex;
+  justify-content: center;
+}
+.App main .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .modal-body img {
+  width: 200px;
+}
+.App main .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter {
+  display: flex;
+  justify-content: center;
+  font-family: "poppinMedium";
+  margin-bottom: 20px;
+}
+.App main .pagging .wrapper .buttons #modal1 .modal-dialog .modal-content .ButtonFooter button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .switchDiv .mainBody {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.App main .mainBodyHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.App main .mainBodyHeading h1 {
+  font-family: "poppinMedium";
+}
+.App main .mainBodyHeading h1 span {
+  font-family: "poppinExtraBold";
+  color: #eb5757;
+}
+.App main .mainServiceContainer {
+  margin-bottom: 50px;
+}
+.App main .radioButtonCheck {
+  margin-bottom: 30px;
+  color: black;
+  text-decoration: none;
+}
+.App main .radioButtonCheck input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App main .radioButtonCheck .radio-button {
+  border: 1px solid #eb5757;
+  width: 200px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  gap: 20px;
+  min-height: 128px;
+}
+.App main .radioButtonCheck .radio-button:hover {
+  background-color: #e7e7e7;
+}
+.App main .radioButtonCheck input[type=radio]:checked + label.radio-button {
+  background-color: #eb5757;
+  color: #fff;
+}
+.App main .radioButtonCheck input[type=radio]:checked + label.radio-button img {
+  filter: brightness(1000%);
+}
+.App main .radioButtonCheck input[type=radio]:checked + label.radio-button .selectDoc {
+  filter: brightness(100%);
+}
+.App main .radioButtonCheck input[type=radio]:checked + label.radio-button span {
+  color: white;
+}
+.App main .radioButtonCheck .imgDiv {
+  position: relative;
+}
+.App main .radioButtonCheck .imgDiv img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .radioButtonCheck .imgDiv .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App main .radioButtonCheck .info .docName {
+  font-size: 18px;
+  font-family: "poppinSemiBold";
+}
+.App main .radioButtonCheck .info .docPara {
+  font-size: 12px;
+  font-family: "poppinMedium";
+}
+.App main .radioButtonCheck .info .docPara span {
+  color: #eb5757;
+}
+.App main .bookDoctor .mainBodyInner .rowButton {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTime .selectDateTimeLabel {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  font-family: "poppinSemiBold";
+  margin-bottom: 10px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTime .selectDateTimeInput {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTime p {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  color: #eb5757;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(235, 87, 87, 0.0901960784);
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTime select {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+  background-position: 400px center;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .doctorDateChooser {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .doctorDateChooser select {
+  border: 1px solid #afadad;
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 15px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker {
+  border-radius: 20px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker button {
+  margin-top: 10px;
+  color: white;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container {
+  width: 100%;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header {
+  border-radius: 20px 20px 10px 10px;
+  background-color: #eb5757;
+  height: 110px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__current-month {
+  font-size: 20px;
+  color: white;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names {
+  margin-top: 15px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+  color: white;
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week {
+  height: 60px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--selected {
+  background-color: #eb5757;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--keyboard-selected {
+  background-color: #eb5757;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .doctorTime {
+  border: 1px solid #eb5757;
+  width: 100%;
+  padding: 10px 5px;
+  color: #eb5757;
+  max-width: 390px;
+  border-radius: 15px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker {
+  width: 100%;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper {
+  border: 2px solid #eb5757;
+  border-radius: 10px;
+  padding: 5px;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__leadingZero {
+  color: black;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__input {
+  border: 0;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .appointmentButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+.App main .bookDoctor .mainBodyInner .wrapper .appointmentButton .done {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 200px;
+}
+.App main .bookLab .allTestShow {
+  width: 90%;
+}
+.App main .bookLab .allTestShow p {
+  text-align: left;
+}
+.App main .bookLab .missingBene {
+  text-align: center;
+  width: 100%;
+}
+.App main .bookLab .missingBene a {
+  color: #eb5757;
+  text-decoration: none;
+}
+.App main .bookLab .mainBodyInner .rowButton {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.App main .bookLab .mainBodyInner .wrapper .LabCarousel .LabCarouselInner {
+  margin-bottom: 20px;
+}
+.App main .bookLab .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .bookLab .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner .imgOuter {
+  width: 160px;
+  height: 100px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.59);
+  margin: 5px;
+}
+.App main .bookLab .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner .imgOuter img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .bookLab .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App main .bookLab .mainBodyInner .wrapper .LabCarousel .LabCarouselInner .carouselItem .carouselItemInner input[type=radio]:checked + label.imgOuter {
+  border: 4px solid #eb5757;
+  padding: 5px;
+  border-radius: 10px;
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass {
+  margin-bottom: 30px;
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass .list-group {
+  width: 50%;
+  min-width: 220px;
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass .list-group .list-group-item p {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass .list-group .list-group-item p button {
+  background-color: #eb5757;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 3px 8px 3px 8px;
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass #selectLocation {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  min-width: 220px;
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+  color: #eb5757;
+  margin-bottom: 20px;
+  background-position: right 15px center;
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass .chooseLabClass {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "poppinSemiBold";
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass .chooseLocationClass {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+  font-family: "poppinSemiBold";
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass #chooseLab {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #eb5757;
+  margin-bottom: 20px;
+}
+.App main .bookLab .mainBodyInner .wrapper .outputDataClass #chooseTest {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  min-width: 220px;
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+  color: #eb5757;
+  margin-bottom: 20px;
+  background-position: right 15px center;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime label {
+  display: flex;
+  margin-bottom: 10px;
+  font-family: "poppinSemiBold";
+  width: 80%;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker {
+  border-radius: 20px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker button {
+  margin-top: 10px;
+  color: white;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container {
+  width: 100%;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header {
+  border-radius: 20px 20px 10px 10px;
+  background-color: #eb5757;
+  height: 110px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__current-month {
+  font-size: 20px;
+  color: white;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names {
+  margin-top: 15px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+  color: white;
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week {
+  height: 60px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+  font-size: 20px;
+  width: 3rem;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--selected {
+  background-color: #eb5757;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--keyboard-selected {
+  background-color: #eb5757;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv {
+  display: flex;
+  justify-content: center;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .TimePickerDivInner {
+  border: 2px solid #eb5757;
+  border-radius: 10px;
+  min-width: 220px;
+  width: 100%;
+  max-width: 390px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .TimePickerDivInner .react-time-picker .react-time-picker__wrapper {
+  border: 0px solid #eb5757;
+  padding: 5px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .TimePickerDivInner .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup {
+  width: 90%;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .TimePickerDivInner .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__leadingZero {
+  color: black;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTimePicker .TimePickerDiv .TimePickerDivInner .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__input {
+  border: 0;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .header {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  font-family: "poppinMedium";
+  font-size: 30px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .header span {
+  font-family: "poppinBold";
+  color: #eb5757;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .modal-body {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: left;
+  flex-direction: column;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .modal-body label {
+  width: 80%;
+  margin-bottom: 10px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime #modal2 .modal-dialog .modal-content .modal-body select {
+  color: #eb5757;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime .viewTest {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 80%;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime .selectDateTimeInput {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime p {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #eb5757;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(235, 87, 87, 0.0901960784);
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime .TimePickerDiv {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #eb5757;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(235, 87, 87, 0.0901960784);
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__wrapper {
+  border: 0;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup {
+  width: 90%;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__leadingZero {
+  color: black;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__wrapper .react-time-picker__inputGroup .react-time-picker__inputGroup__input {
+  border: 0;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime .TimePickerDiv .react-time-picker .react-time-picker__clock {
+  inset: auto auto -800% 0px !important;
+  border: none;
+}
+.App main .bookLab .mainBodyInner .wrapper .selectDateTime select {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.App main .bookLab .mainBodyInner .wrapper .appointmentButton {
+  width: 97.5%;
+  display: flex;
+  justify-content: flex-end;
+}
+.App main .bookLab .mainBodyInner .wrapper .appointmentButton .checkup {
+  display: block;
+  width: 200px;
+  border: 1px solid black;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 25px;
+  padding: 10px 30px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App main .bookLab .mainBodyInner .wrapper .appointmentButton .done {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 200px;
+}
+.App main .pharmacy .mainBodyInner .rowButton {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.App main .pharmacy .ourProducts .productMain img {
+  width: 100%;
+}
+.App main .pharmacy .ourProducts .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+}
+.App main .pharmacy .ourProducts .mainHeading hr {
+  width: 50%;
+}
+.App main .pharmacy .ourProducts .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .pharmacy .ourProducts .mainHeading p span {
+  color: #eb5757;
+  font-family: "poppinBold";
+}
+.App main .pharmacy .ourProducts hr {
+  opacity: 0.1;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel {
+  margin-top: 50px;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading2 p::after {
+  content: "" !important;
+  width: 0 !important;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #eb5757;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(34, 167, 179, 0);
+  padding-right: 40px;
+  color: #eb5757;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search::-moz-placeholder {
+  color: rgba(235, 87, 87, 0.768627451);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search::placeholder {
+  color: rgba(235, 87, 87, 0.768627451);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .btn-search {
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #eb5757;
+  background-color: transparent;
+  pointer-events: painted;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .btn-search:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #eb5757;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search.focused {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #eb5757;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .carousel {
+  margin: 20px 0;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .carousel .relativeCarouselItem {
+  position: relative;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .carousel .relativeCarouselItem .carouselItemImage {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 2px solid #eb5757;
+  border-radius: 50%;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .carousel .carouselItem .inner {
+  text-decoration: none;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100px;
+  background-color: transparent;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .carousel .carouselItem .inner span {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .viewButton {
+  text-align: right;
+}
+.App main .pharmacy .ourProducts .productBody .categoryCarousel .viewButton a {
+  font-family: "poppinMedium";
+  color: #eb5757;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .startHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #eb5757;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .startHeading .viewButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .startHeading .viewButton a {
+  font-family: "poppinMedium";
+  color: #eb5757;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .slick-dots {
+  margin-top: 30px;
+  bottom: -14px;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .slick-dots li {
+  margin: 0;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .slick-dots li button:before {
+  font-size: 10;
+  color: red;
+  opacity: 0.2;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .slick-dots li.slick-active button:before {
+  font-size: 15px;
+  opacity: 0.7;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+  min-width: 300px;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card:hover {
+  scale: 1 !important;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: rgb(241, 241, 241);
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #eb5757;
+  font-family: "poppinSemiBold";
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .pharmacy .ourProducts .productBody .bestSeller .productItems .card .card-body .sale {
+  background-color: #eb5757;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .pharmacy .ourProducts .productBody .brands {
+  margin-top: 50px;
+}
+.App main .pharmacy .ourProducts .productBody .brands .startHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .pharmacy .ourProducts .productBody .brands .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .pharmacy .ourProducts .productBody .brands .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #eb5757;
+}
+.App main .pharmacy .ourProducts .productBody .brands .startHeading .viewButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.App main .pharmacy .ourProducts .productBody .brands .startHeading .viewButton a {
+  font-family: "poppinMedium";
+  color: #eb5757;
+}
+.App main .pharmacy .ourProducts .productBody .brands .carousel {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 25px;
+  width: 100%;
+}
+.App main .pharmacy .ourProducts .productBody .brands .carousel .carouselItem .inner {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #eb5757;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.App main .pharmacy .ourProducts .productBody .brands .carousel .carouselItem .inner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .pharmacy .ourProducts .productBody .brands .viewButton {
+  text-align: right;
+}
+.App main .pharmacy .ourProducts .productBody .brands .viewButton a {
+  font-family: "poppinMedium";
+  color: #eb5757;
+}
+.App main .bestSeller .productMain {
+  margin-bottom: 80px;
+}
+.App main .bestSeller .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .bestSeller .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .bestSeller .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .bestSeller .productMain .mainHeading p span {
+  color: #eb5757;
+  font-family: "poppinBold";
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #eb5757;
+  font-family: "poppinSemiBold";
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .bestSeller .productMain .bestSellerBody .productItems .card .card-body .sale {
+  background-color: #eb5757;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .frequentlyBought .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .frequentlyBought .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .frequentlyBought .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .frequentlyBought .productMain .mainHeading p span {
+  color: #eb5757;
+  font-family: "poppinBold";
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #eb5757;
+  font-family: "poppinSemiBold";
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .frequentlyBought .productMain .bestSellerBody .productItems .card .card-body .sale {
+  background-color: #eb5757;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .ourCategories .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .ourCategories .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .ourCategories .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .ourCategories .productMain .mainHeading p span {
+  color: #eb5757;
+  font-family: "poppinBold";
+}
+.App main .ourCategories .productMain .categoryCarousel {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #eb5757;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading .subHeaderIcon {
+  margin-right: 30px;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading .subHeaderIcon .search-box {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(34, 167, 179, 0);
+  padding-right: 40px;
+  color: #eb5757;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search::-moz-placeholder {
+  color: rgba(235, 87, 87, 0.768627451);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search::placeholder {
+  color: rgba(235, 87, 87, 0.768627451);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading .subHeaderIcon .search-box .input-search:focus {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading .subHeaderIcon .search-box .btn-search {
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #eb5757;
+  background-color: transparent;
+  pointer-events: painted;
+}
+.App main .ourCategories .productMain .categoryCarousel .startHeading .subHeaderIcon .search-box .btn-search:focus ~ .input-search {
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #eb5757;
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.App main .ourCategories .productMain .categoryCarousel .carousel {
+  margin: 20px 0 12px;
+}
+.App main .ourCategories .productMain .categoryCarousel .carousel .carouselItem .inner {
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #eb5757;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.App main .ourCategories .productMain .categoryCarousel .carousel .carouselItem .inner span {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+.App main .ourCategories .productMain .categoryCarousel .viewButton {
+  text-align: right;
+}
+.App main .ourCategories .productMain .categoryCarousel .viewButton a {
+  font-family: "poppinMedium";
+  color: #eb5757;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #eb5757;
+  font-family: "poppinSemiBold";
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .ourCategories .productMain .bestSellerBody .productItems .card .card-body .sale {
+  background-color: #eb5757;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .brands .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .brands .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .brands .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .brands .productMain .mainHeading p span {
+  color: #eb5757;
+  font-family: "poppinBold";
+}
+.App main .brands .productMain .categoryCarousel {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .brands .productMain .categoryCarousel .startHeading {
+  display: flex;
+}
+.App main .brands .productMain .categoryCarousel .startHeading p {
+  position: relative;
+  font-family: "poppinSemiBold";
+  font-size: 25px;
+}
+.App main .brands .productMain .categoryCarousel .startHeading p::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #eb5757;
+}
+.App main .brands .productMain .categoryCarousel .carousel {
+  margin-bottom: 15px;
+}
+.App main .brands .productMain .categoryCarousel .carousel .carouselItem .inner {
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.App main .brands .productMain .categoryCarousel .carousel .carouselItem .inner span {
+  color: #eb5757;
+  font-size: 14px;
+}
+.App main .brands .productMain .categoryCarousel .viewButton {
+  text-align: right;
+}
+.App main .brands .productMain .categoryCarousel .viewButton a {
+  font-family: "poppinMedium";
+  color: #eb5757;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card {
+  position: relative;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(31, 31, 31);
+}
+.App main .brands .productMain .bestSellerBody .productItems .card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px 20px 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .review p {
+  color: #a1a0a0;
+  font-size: 12px;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .card-title {
+  font-family: "poppinSemiBold";
+  margin-bottom: 0;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .card-text {
+  color: #a1a0a0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .pricing {
+  display: flex;
+  gap: 10px;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .pricing .price {
+  font-size: 25px;
+  color: #eb5757;
+  font-family: "poppinSemiBold";
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .pricing small {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App main .brands .productMain .bestSellerBody .productItems .card .card-body .sale {
+  background-color: #eb5757;
+  color: white;
+  font-size: 12px;
+  border-radius: 20px 0 20px 0;
+  padding: 5px 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.App main .productItemContainer {
+  margin-bottom: 20px;
+}
+.App main .productItem .productMain {
+  margin-top: 30px;
+}
+.App main .productItem .productMain .itemImageMain {
+  background-color: rgb(241, 241, 241);
+  padding: 30px;
+  width: 80%;
+  min-width: 280px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+.App main .productItem .productMain .itemImageMain .itemImageInner {
+  width: 80%;
+  height: 80%;
+}
+.App main .productItem .productMain .itemImageMain .itemImageInner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .productItem .productMain .AboutItem {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.App main .productItem .productMain .AboutItem .sale p {
+  color: #eb5757;
+  background-color: rgba(235, 87, 87, 0.1921568627);
+  display: inline;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+}
+.App main .productItem .productMain .AboutItem .productName {
+  font-size: 30px;
+  font-family: "poppinSemiBold";
+}
+.App main .productItem .productMain .AboutItem .rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+.App main .productItem .productMain .AboutItem .rating .stars {
+  color: #f9a037;
+}
+.App main .productItem .productMain .AboutItem .rating .review {
+  color: #a1a0a0;
+}
+.App main .productItem .productMain .AboutItem .pricing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+.App main .productItem .productMain .AboutItem .pricing p {
+  color: #eb5757;
+  font-size: 40px;
+  font-family: "poppinBold";
+}
+.App main .productItem .productMain .AboutItem .pricing .saves {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.App main .productItem .productMain .AboutItem .pricing .saves span {
+  font-size: 14px;
+  color: #eb5757;
+}
+.App main .productItem .productMain .AboutItem .pricing .saves small {
+  font-size: 20px;
+  color: #a1a0a0;
+  font-family: "poppinBold";
+}
+.App main .productItem .productMain .AboutItem .summary {
+  font-size: 14px;
+}
+.App main .productItem .productMain .AboutItem .addition {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.App main .productItem .productMain .AboutItem .addition .counter {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 25px;
+  width: 100px;
+}
+.App main .productItem .productMain .AboutItem .addition .counter .counterNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+}
+.App main .productItem .productMain .AboutItem .addition .counter .counterButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  flex-direction: column;
+}
+.App main .productItem .productMain .AboutItem .addition .counter .counterButtons button {
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  top: 3px;
+}
+.App main .productItem .productMain .AboutItem .addition .counter .counterButtons button:nth-of-type(2) {
+  top: unset;
+  bottom: 3px;
+}
+.App main .productItem .productMain .AboutItem .addition .addToCartButton a {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 190px;
+  height: 50px;
+  padding: 15px 30px 0px 30px;
+}
+.App main .productItem .productMain .AboutItem .addition .addToCartButton a i {
+  margin-right: 10px;
+}
+.App main .productItem .productMain .AboutItem .addition .favoriteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .productItem .productMain .AboutItem .addition .favoriteButton button {
+  padding: 10px 10px 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(214, 214, 214);
+  background-color: rgba(161, 160, 160, 0);
+}
+.App main .productItem .productMain .AboutItem .itemInfo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+  font-size: 14px;
+}
+.App main .productItem .productMain .AboutItem .itemInfo .firstCol {
+  color: #a1a0a0;
+}
+.App main .productItem .productMain .AboutItem .itemInfo .firstCol span {
+  color: #eb5757;
+}
+.App main .productItem .productMain .AboutItem .itemInfo .secondCol {
+  color: #a1a0a0;
+}
+.App main .productItem .productMain .AboutItem .itemInfo .secondCol span {
+  color: #eb5757;
+}
+.App main .productItem .productMain .card .card-body .switchButton {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.App main .productItem .productMain .card .card-body .switchButton .radioButton {
+  display: flex;
+  gap: 5px;
+}
+.App main .productItem .productMain .card .card-body .switchTabs .description {
+  color: #a1a0a0;
+  font-size: 14px;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.App main .productItem .productMain .card .card-body .switchTabs .description .paragraph hr {
+  margin: 0.5rem 0;
+}
+.App main .productItem .productMain .card .card-body .switchTabs .description .paragraph .heading {
+  color: #1e1729;
+  font-size: 20px;
+  font-family: "poppinSemiBold";
+}
+.App main .productItem .productMain .card .card-body .switchTabs .description .paragraph ul {
+  list-style: none;
+}
+.App main .productItem .productMain .card .card-body .switchTabs .description .paragraph ul li::before {
+  content: "•";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.App main .productItem .productMain .card .card-body .switchTabs .list-group .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.App main .productItem .productMain .card .card-body .switchTabs .list-group .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .productItem .productMain .card .card-body .switchTabs .firstDiv {
+  display: flex;
+}
+.App main .cart .productMain .mainHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.App main .cart .productMain .mainHeading hr {
+  width: 50%;
+}
+.App main .cart .productMain .mainHeading p {
+  font-size: 40px;
+  font-family: "poppinMedium";
+}
+.App main .cart .productMain .mainHeading p span {
+  color: #eb5757;
+  font-family: "poppinBold";
+}
+.App main .cart .productMain .cartBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .cart .productMain .cartBody .cardInner {
+  width: 60%;
+}
+.App main .cart .productMain .cartBody .cardInner .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.App main .cart .productMain .cartBody .cardInner .heading .yourOrder {
+  font-family: "poppinSemiBold";
+  font-size: 20px;
+  position: relative;
+}
+.App main .cart .productMain .cartBody .cardInner .heading .yourOrder::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #eb5757;
+}
+.App main .cart .productMain .cartBody .cardInner .heading .total {
+  font-family: "poppinSemiBold";
+  font-size: 14px;
+  color: #a1a0a0;
+}
+.App main .cart .productMain .cartBody .cardInner .heading .total span {
+  font-size: 20px;
+  color: #eb5757;
+}
+.App main .cart .productMain .cartBody .cardInner .listMain .image {
+  width: 100%;
+  max-width: 120px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #dadada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App main .cart .productMain .cartBody .cardInner .listMain .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App main .cart .productMain .cartBody .cardInner .listMain .middle {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.App main .cart .productMain .cartBody .cardInner .listMain .middle .rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.App main .cart .productMain .cartBody .cardInner .listMain .middle .rating span {
+  color: #f9a037;
+  text-decoration: none;
+}
+.App main .cart .productMain .cartBody .cardInner .listMain .quantity {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App main .cart .productMain .cartBody .cardInner .listMain .quantity button {
+  color: #eb5757;
+  background-color: transparent;
+}
+.App main .cart .productMain .cartBody .cardInner .listMain .price {
+  font-size: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eb5757;
+  font-family: "poppinBold";
+}
+.App main .cart .productMain .cartBody .cardInner .buttonDiv {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.App main .cart .productMain .cartBody .cardInner .buttonDiv a {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 160px;
+}
+.App main .checkOut .mainBody {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.App main .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime label {
+  display: flex;
+  margin-bottom: 10px;
+  font-family: "poppinSemiBold";
+  width: 85%;
+}
+.App main .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime .viewTest {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 80%;
+}
+.App main .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime .selectDateTimeInput {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.App main .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime p {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  color: #eb5757;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(235, 87, 87, 0.0901960784);
+}
+.App main .checkOut .mainBody .mainBodyInner .wrapper .selectDateTime select {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.App main .checkOut .mainBody .mainBodyInner .wrapper .appointmentButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+}
+.App main .checkOut .mainBody .mainBodyInner .wrapper .appointmentButton .done {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 200px;
+}
+.App .slick-dots {
+  bottom: 25px;
+}
+.App .brandCarousel .slick-dots {
+  bottom: -21px !important;
+}
+.App .brandCarousel .slick-arrow::before {
+  color: #f13e3e;
+}
+.App .slick-dots li {
+  margin: 0;
+}
+.App .slick-dots li button:before {
+  font-size: 10;
+  color: red;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+.App .slick-dots li.slick-active button:before {
+  font-size: 15px;
+  opacity: 0.7;
+}
+.App table thead tr td {
+  white-space: nowrap;
+}
+.App .insurance {
+  transition: opacity 1s ease;
+}
+.App .insurance .switchDiv {
+  display: none;
+}
+.App .insurance .switchDiv .mainBodyInner .rowButton {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.App .insurance .switchDiv .mainBodyInner .rowButton .columnButtons {
+  text-align: center;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton {
+  margin-bottom: 30px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button {
+  border: 1px solid #eb5757;
+  width: 260px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  gap: 20px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button:hover {
+  background-color: #e7e7e7;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button i {
+  background-color: #eb5757;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 4px 0 4px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button hr {
+  opacity: 0.1;
+  width: 100%;
+  margin: 0;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .imgPlan {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .imgPlan img {
+  width: 40px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .plan {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .plan p {
+  font-weight: 600;
+  font-size: 25px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .plan p span {
+  color: #eb5757;
+  font-size: 30px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .plan small {
+  font-size: 11px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .duration {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .duration p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .radio-button .imgDiv .duration small {
+  font-size: 11px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button {
+  background-color: #eb5757;
+  color: #fff;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button img {
+  filter: brightness(1000%);
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button .providerClass {
+  filter: brightness(100%);
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button span {
+  color: white;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button .planDescription i {
+  background-color: white;
+  color: #eb5757;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton input[type=checkbox]:checked + label.radio-button i {
+  background-color: white;
+  color: #eb5757;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .imgDiv {
+  position: relative;
+  justify-content: center;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .imgDiv img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .imgDiv .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .info {
+  display: flex;
+  flex-direction: column;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .info .planDescription {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .info .planDescription i {
+  color: white;
+  background-color: #eb5757;
+  border-radius: 50%;
+  padding: 2px 4px 2px 2px;
+  font-size: 10px;
+  padding: 2px 4px 0px 4px;
+  margin-right: 10px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .info .planDescription .docPara {
+  text-align: left;
+  font-size: 12px;
+  font-family: "poppinMedium";
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .checkBoxButton .info .planDescription .docPara span {
+  color: #eb5757;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton {
+  margin-bottom: 30px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button {
+  border: 1px solid #eb5757;
+  width: 225px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  gap: 20px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button:hover {
+  background-color: #e7e7e7;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button hr {
+  opacity: 0.1;
+  width: 100%;
+  margin: 0;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .imgPlan {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .imgPlan img {
+  width: 40px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .plan {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .plan p {
+  font-weight: 600;
+  font-size: 25px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .plan p span {
+  color: #eb5757;
+  font-size: 30px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .plan small {
+  font-size: 11px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .duration {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .duration p {
+  font-size: 17px;
+  font-weight: 600;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button .imgDiv .duration small {
+  font-size: 11px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radio-button a {
+  text-decoration: none;
+  color: black;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .radioplan {
+  width: 260px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button {
+  background-color: #eb5757;
+  color: #fff;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button img {
+  filter: brightness(1000%);
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button .providerClass {
+  filter: brightness(100%);
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button span {
+  color: white;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton input[type=radio]:checked + label.radio-button .planDescription i {
+  background-color: white;
+  color: #eb5757;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .imgDiv {
+  position: relative;
+  justify-content: center;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .imgDiv img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .imgDiv .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .imgDiv1 {
+  position: relative;
+  justify-content: center;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .imgDiv1 img {
+  width: 100px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .imgDiv1 .verify {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .info {
+  display: flex;
+  flex-direction: column;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .info .planDescription {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .info .planDescription i {
+  color: white;
+  background-color: #eb5757;
+  border-radius: 50%;
+  padding: 2px 4px 2px 2px;
+  font-size: 10px;
+  padding: 2px 4px 0px 4px;
+  margin-right: 10px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .info .planDescription .docPara {
+  text-align: left;
+  font-size: 12px;
+  font-family: "poppinMedium";
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .radioButton .info .planDescription .docPara span {
+  color: #eb5757;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker {
+  width: 80%;
+  border-radius: 20px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker button {
+  margin-top: 10px;
+  color: white;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container {
+  width: 100%;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header {
+  border-radius: 20px 20px 10px 10px;
+  background-color: #eb5757;
+  height: 110px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__current-month {
+  font-size: 20px;
+  color: white;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names {
+  margin-top: 15px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__header .react-datepicker__day-names .react-datepicker__day-name {
+  color: white;
+  font-size: 20px;
+  width: 3rem;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week {
+  height: 60px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day {
+  font-size: 20px;
+  width: 3rem;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--selected {
+  background-color: #eb5757;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .react-datepicker .react-datepicker__month-container .react-datepicker__month .react-datepicker__week .react-datepicker__day--keyboard-selected {
+  background-color: #eb5757;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .selectDateTimeLabel {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  font-family: "poppinSemiBold";
+  margin-bottom: 10px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime .selectDateTimeInput {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime p {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  color: #eb5757;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: rgba(235, 87, 87, 0.0901960784);
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .selectDateTime select {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .appointmentButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .appointmentButton .done {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 200px;
+}
+.App .insurance .switchDiv .mainBodyInner .wrapper .bookSomeone {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 250px;
+}
+.App .insurance .firstSwitchDiv {
+  display: block;
+}
+.App .selectBeneficiary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .selectBeneficiary select {
+  border: 2px solid #eb5757;
+  border-radius: 30px;
+  padding: 10px;
+  width: 40%;
+  color: #eb5757;
+  margin-bottom: 20px;
+}
+.App .loginForm {
+  margin-bottom: 50px;
+  transition: opacity 1s ease;
+}
+.App .loginForm .loginBanner .banner .bannerText {
+  background-image: url(../assets/images/registration/login.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #eb5757;
+  padding: 170px 0 0 0;
+}
+.App .loginForm .loginBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App .loginForm .loginBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App .loginForm .loginBanner .banner .bannerText .bannerInfo p span {
+  color: #eb5757;
+}
+.App .loginForm .login {
+  margin-top: 40px;
+}
+.App .loginForm .login .loginMain .heading {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 80%;
+}
+.App .loginForm .login .loginMain .heading p {
+  font-family: "poppinBold";
+  color: #eb5757;
+  font-size: 35px;
+}
+.App .loginForm .login .loginMain .heading small {
+  font-family: "poppinMedium";
+}
+.App .loginForm .login .loginMain .heading small a {
+  color: #eb5757;
+  text-decoration: none;
+}
+.App .loginForm .login .loginMain .loginInputFields {
+  margin-bottom: 20px;
+}
+.App .loginForm .login .loginMain .loginInputFields input {
+  width: 100%;
+  border-radius: 50px;
+  height: 45px;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #d3d3d3;
+}
+.App .loginForm .login .loginMain .loginInputFields2 {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.App .loginForm .login .loginMain .loginInputFields2 .loginInputFields2Inner {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.App .loginForm .login .loginMain .loginInputFields2 .loginInputFields2Inner .passwordFieldReg {
+  width: 100%;
+}
+.App .loginForm .login .loginMain .loginInputFields2 .loginInputFields2Inner .passwordFieldReg input {
+  width: 100%;
+}
+.App .loginForm .login .loginMain .loginInputFields2 input {
+  width: 100%;
+  border-radius: 50px;
+  height: 45px;
+  padding: 10px;
+  width: 38%;
+  border: 1px solid #d3d3d3;
+}
+.App .loginForm .login .loginMain .loginInputFields2 .passwordMatch {
+  color: #eb5757;
+  position: absolute;
+  bottom: -40%;
+  left: 10%;
+  font-size: 12px;
+}
+.App .loginForm .login .loginMain .infoDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.App .loginForm .login .loginMain .infoDiv .rememberDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .loginForm .login .loginMain .infoDiv .rememberDiv input {
+  margin-right: 10px;
+}
+.App .loginForm .login .loginMain .infoDiv .forgetDiv a {
+  color: #eb5757;
+  text-decoration: none;
+}
+.App .loginForm .login .loginMain .loginButton {
+  margin-bottom: 10px;
+}
+.App .loginForm .login .loginMain .loginButton button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 80%;
+}
+.App .loginForm .login .loginMain .orDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.App .loginForm .login .loginMain .orDiv p {
+  position: relative;
+}
+.App .loginForm .login .loginMain .orDiv p::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 40%;
+  height: 2px;
+  background-color: #e2e2e2;
+  width: 100px;
+}
+.App .loginForm .login .loginMain .orDiv p::before {
+  content: "";
+  position: absolute;
+  right: 30px;
+  bottom: 40%;
+  height: 2px;
+  background-color: #e2e2e2;
+  width: 100px;
+}
+.App .loginForm .login .loginMain .loginOther > div {
+  width: 100%;
+}
+.App .loginForm .login .loginMain .loginOther {
+  width: 80%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.App .loginForm .login .loginMain .loginOther button {
+  border: 1px solid #d3d3d3;
+  padding: 10px 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  width: 100%;
+  font-size: 14px;
+  background-color: rgba(30, 20, 40, 0);
+}
+.App .loginForm .login .loginMain .loginOther button i {
+  color: blue;
+}
+.App .loginForm .login .loginMain .loginOther button img {
+  width: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App .loginForm .login .sideImageDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .loginForm .login .sideImageDiv img {
+  width: 80%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App .contactUs .contactBanner .banner .bannerText {
+  background-image: url(../assets/images/Insurance/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #eb5757;
+  padding: 170px 0 0 0;
+}
+.App .contactUs .contactBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App .contactUs .contactBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App .contactUs .contactBanner .banner .bannerText .bannerInfo p span {
+  color: #eb5757;
+}
+.App .contactUs .contactSection .contactWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+}
+.App .contactUs .contactSection .contactWrapper .cardRelativeField {
+  position: relative;
+}
+.App .contactUs .contactSection .contactWrapper .cardRelativeField .contactImgClass {
+  position: absolute;
+  width: 150px;
+  top: 10px;
+  right: 10px;
+}
+.App .contactUs .contactSection .contactWrapper .card iframe {
+  height: 350px;
+}
+.App .contactUs .contactSection .contactWrapper .cardForm {
+  width: 70%;
+  padding: 50px;
+}
+.App .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields label {
+  display: block;
+}
+.App .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields input {
+  border: 1px solid #eb5757;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.App .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields textarea {
+  border: 1px solid #eb5757;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 100%;
+  resize: none;
+  height: 150px;
+}
+.App .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields p {
+  color: #eb5757;
+  font-size: 18px;
+  font-weight: bold;
+}
+.App .contactUs .contactSection .contactWrapper .cardForm .contactForm .fields .heading {
+  font-size: 28px;
+}
+.App .contactUs .contactSection .contactWrapper .card {
+  width: 70%;
+}
+.App .contactUs .contactSection .contactWrapper .cardAbout .contactAbout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.App .contactUs .contactSection .contactWrapper .cardAbout .contactAbout i {
+  color: #eb5757;
+  font-size: 25px;
+}
+.App .aboutUs .aboutBanner .banner .bannerText {
+  background-image: url(../assets/images/aboutus/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #eb5757;
+  padding: 170px 0 0 0;
+}
+.App .aboutUs .aboutBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App .aboutUs .aboutBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App .aboutUs .aboutBanner .banner .bannerText .bannerInfo p span {
+  color: #eb5757;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .teamHeading {
+  font-family: "poppinMedium";
+  font-size: 40px;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .teamHeading span {
+  font-family: "poppinBold";
+  color: #eb5757;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .linkedAnchor {
+  color: #eb5757;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .image {
+  border-radius: 50%;
+  border: 2px solid #eb5757;
+  width: 182px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .image img {
+  width: 180px;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .image .borderCircle {
+  top: 20px;
+  right: 8px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #eb5757;
+  padding: 6px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo .nameheading {
+  font-family: "poppinMedium";
+  font-size: 35px;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .ceo small {
+  color: #eb5757;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .image {
+  border-radius: 50%;
+  border: 2px solid #eb5757;
+  width: 102px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .image .profilePic {
+  width: 100px;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .image .company {
+  position: absolute;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  bottom: -10px;
+  left: -20px;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .image .borderCircle {
+  top: 5px;
+  right: 4px;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background-color: #eb5757;
+  padding: 5px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile .nameheading {
+  font-family: "poppinSemiBold";
+  font-size: 20px;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile small {
+  color: #eb5757;
+}
+.App .aboutUs .aboutSection .aboutWrapper .ourTeam .ourTeamInner .team .teamProfile .profile a {
+  color: #eb5757;
+}
+.App .aboutUs .ourStory {
+  background-color: #fffff9;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+.App .aboutUs .ourStory .aboutPicOutter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.App .aboutUs .ourStory .aboutPicOutter img {
+  width: 70%;
+}
+.App .aboutUs .ourStory .aboutPicOutter .newsImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .aboutUs .ourStory .aboutPicOutter .newsImage img {
+  width: 250px;
+}
+.App .aboutUs .ourStory .aboutPara .heading {
+  width: 70%;
+}
+.App .aboutUs .ourStory .aboutPara .heading .teamHeading {
+  font-family: "poppinMedium";
+  font-size: 40px;
+}
+.App .aboutUs .ourStory .aboutPara .heading .teamHeading span {
+  font-family: "poppinBold";
+  color: #eb5757;
+}
+.App .aboutUs .ourStory .aboutPara .paragraph {
+  width: 70%;
+}
+.App .aboutUs .ourStory .aboutPara2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.App .aboutUs .ourStory .aboutPara2 .heading {
+  width: 70%;
+}
+.App .aboutUs .ourStory .aboutPara2 .heading .teamHeading {
+  font-family: "poppinMedium";
+  font-size: 40px;
+}
+.App .aboutUs .ourStory .aboutPara2 .heading .teamHeading span {
+  font-family: "poppinBold";
+  color: #eb5757;
+}
+.App .aboutUs .ourStory .aboutPara2 .paragraph {
+  width: 70%;
+}
+.App .aboutUs .newsCarousel {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.App .aboutUs .newsCarousel .CarouselHeading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.App .aboutUs .newsCarousel .CarouselHeading p {
+  font-size: 50px;
+}
+.App .aboutUs .newsCarousel .CarouselHeading p span {
+  color: #eb5757;
+  font-family: "poppinExtraBold";
+}
+.App .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner img {
+  filter: grayscale(100%);
+}
+.App .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner img:hover {
+  filter: grayscale(0);
+}
+.App .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 {
+  justify-content: center;
+  display: flex !important;
+  align-items: center;
+}
+.App .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img {
+  filter: grayscale(100%);
+}
+.App .aboutUs .newsCarousel .carouselDiv .carouselInner .carouselItem .carouselItemInner1 img:hover {
+  filter: grayscale(0);
+}
+.App .profileMain {
+  margin-bottom: 50px;
+  transition: opacity 1s ease;
+}
+.App .profileMain .profileBanner .banner .bannerText {
+  background-image: url(../assets/images/profile/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #eb5757;
+  padding: 170px 0 0 0;
+}
+.App .profileMain .profileBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App .profileMain .profileBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App .profileMain .profileBanner .banner .bannerText .bannerInfo p span {
+  color: #eb5757;
+}
+.App .profileMain .profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+.App .profileMain .profile .profileSide {
+  width: 300px;
+  margin-top: 40px;
+}
+.App .profileMain .profile .profileSide ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.App .profileMain .profile .profileSide ul li {
+  margin-bottom: 20px;
+}
+.App .profileMain .profile .profileSide ul li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.App .profileMain .profile .profileSide ul li .active {
+  background-color: #eb5757;
+  color: white;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.App .profileMain .profile .profileBody {
+  width: 100%;
+}
+.App .profileMain .profile .profileBody .profileInner {
+  display: flex;
+  flex-direction: column;
+}
+.App .profileMain .profile .profileBody .profileInner .profileHead {
+  width: 100%;
+  position: relative;
+}
+.App .profileMain .profile .profileBody .profileInner .profileHead .photoContent .coverPhoto {
+  position: relative;
+  min-height: 250px;
+  width: 100%;
+}
+.App .profileMain .profile .profileBody .profileInner .profileHead .photoContent .coverPhoto img {
+  border-radius: 100px 10px 10px 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.App .profileMain .profile .profileBody .profileInner .profileHead .profileInfo {
+  display: flex;
+  flex-direction: row;
+}
+.App .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profilePhoto {
+  position: absolute;
+  top: 190px;
+  left: 20px;
+}
+.App .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profilePhoto img {
+  width: 150px;
+  min-width: 150px;
+  min-height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 150px;
+  background-color: white;
+  border: 5px solid white;
+}
+.App .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profileDetails {
+  margin-left: 25%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.App .profileMain .profile .profileBody .profileInner .profileHead .profileInfo .profileDetails .editButton button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  background-color: rgb(37, 37, 37);
+}
+.App .profileMain .profile .profileBody .profileInner form {
+  width: 100%;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm {
+  margin-top: 70px;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields label {
+  width: 40%;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField3 {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .pfpImg {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField {
+  display: inline-block;
+  width: 60%;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField .passwordButton {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 208px;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField label {
+  display: inline;
+  color: grey;
+  cursor: pointer;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField input {
+  border: 1px solid grey;
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField input[type=file] {
+  display: none;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField textarea {
+  resize: none;
+  border: 1px solid grey;
+  width: 80%;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField .profileImg {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField .profileBannerImg {
+  width: 100%;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  max-width: 290px;
+  min-width: 175px;
+}
+.App .profileMain .profile .profileBody .profileInner form .profileForm .fields .inputField button {
+  color: grey;
+  background-color: rgba(30, 23, 41, 0);
+}
+.App .profileMain .profile .profileBody .profileWrapper .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .header .mainHeading {
+  font-weight: 600;
+  font-size: 30px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .header .headerButton button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 190px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .header .headerButton a {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  width: 175px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body {
+  position: relative;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table {
+  font-size: 14px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table thead tr {
+  border-color: #1e1428;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table thead tr th {
+  color: #a1a0a0;
+  font-weight: 500;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table tbody tr td {
+  min-width: 80px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table tbody tr td .edit {
+  color: grey;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .table-responsive .table tbody tr td .delete {
+  background-color: #eb5757;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 7px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card {
+  border-radius: 25px;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  background-image: linear-gradient(to bottom right, rgb(180, 255, 251), rgb(255, 163, 243));
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card::after {
+  content: "";
+  position: absolute;
+  inset: -0.625em;
+  width: 100%;
+  max-width: 410px;
+  height: 200px;
+  left: 27px;
+  border-radius: 20px;
+  top: 35px;
+  background: linear-gradient(to bottom right, rgba(180, 255, 251, 0.568), rgba(255, 163, 243, 0.568));
+  filter: blur(5px);
+  z-index: -1;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading .cardHeading {
+  font-weight: 600;
+  font-size: 18px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading .circles {
+  position: relative;
+  width: 45px;
+  height: 30px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading .circles .circle1 {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  background-color: rgba(255, 163, 243, 0.726);
+  padding: 10px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card .card-body .heading .circles .circle2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(180, 255, 251, 0.562);
+  padding: 10px;
+  border-radius: 50%;
+  width: 10px;
+  height: 30px;
+  width: 30px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card .card-body .cardNumber {
+  font-weight: 600;
+  font-size: 25px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .card .card-body .aboutCard {
+  font-weight: 500;
+  font-size: 15px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .accept {
+  margin-top: 10px;
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .accordion .accordion-item .accordion-header .accordion-button {
+  color: #eb5757;
+  background-color: rgba(235, 87, 87, 0.0745098039);
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .accordion .accordion-item .accordion-header .accordion-button:focus {
+  box-shadow: rgba(235, 87, 87, 0.5607843137);
+  border-color: rgba(235, 87, 87, 0.5607843137);
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .accordion .accordion-item .accordion-body .totalBill button {
+  margin-top: 20px;
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0px 2px;
+  background: #eb5757;
+  display: inline-block;
+  color: #fff;
+  border-radius: 3px 3px 0px 0px;
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.0470588235);
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels {
+  background: rgba(255, 255, 255, 0.9647058824);
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.0470588235);
+  min-height: 200px;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 20px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel {
+  display: block;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .rewardList {
+  display: flex;
+  gap: 20px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .rewardListClass {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .metaDatasDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .metaDatasDivOuter .metaDatasDiv:last-child {
+  border-bottom: none !important;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .metaDatasDiv .metaData {
+  background-color: rgb(201, 201, 201);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 0;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .metaButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .metaButtons .viewButton {
+  background-color: #f1f1f1;
+  color: grey;
+  border-radius: 5px;
+  border: 1px solid #bbbbbb;
+  padding: 10px 20px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .metaButtons .acceptButton {
+  color: #026851;
+  background-color: rgba(2, 104, 80, 0.137254902);
+  border-radius: 5px;
+  border: 1px solid rgba(2, 104, 80, 0.568627451);
+  padding: 10px 20px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .metaButtons button {
+  padding: 4px 15px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .metaButtons .rejectButton {
+  color: rgb(202, 0, 0);
+  background-color: rgba(202, 0, 0, 0.116);
+  border-radius: 5px;
+  border: 1px solid rgba(202, 0, 0, 0.5);
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .list-group .list-group-item {
+  position: relative;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .labTestPanel .list-group .list-group-item small {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: grey;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .rewardList {
+  display: flex;
+  gap: 20px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .rewardListClass {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .metaDatasDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #b0b0b0;
+  padding-bottom: 10px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .metaDatasDivOuter .metaDatasDiv:last-child {
+  border-bottom: none !important;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .metaDatasDiv .metaData {
+  background-color: rgb(201, 201, 201);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 0;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .metaButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .metaButtons .viewButton {
+  color: grey;
+  border-radius: 5px;
+  border: 1px solid #bbbbbb;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .metaButtons .acceptButton {
+  color: #026851;
+  background-color: rgba(2, 104, 80, 0.137254902);
+  border-radius: 5px;
+  border: 1px solid rgba(2, 104, 80, 0.568627451);
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .metaButtons button {
+  padding: 4px 15px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .metaButtons .rejectButton {
+  color: rgb(202, 0, 0);
+  background-color: rgba(202, 0, 0, 0.116);
+  border-radius: 5px;
+  border: 1px solid rgba(202, 0, 0, 0.5);
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .list-group .list-group-item {
+  position: relative;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panels .panel .list-group .list-group-item small {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: grey;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments .radio {
+  display: none;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #one:checked ~ .panels #one-panel,
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #two:checked ~ .panels #two-panel,
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #three:checked ~ .panels #three-panel,
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #four:checked ~ .panels #four-panel,
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #five:checked ~ .panels #five-panel {
+  display: block;
+}
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #one:checked ~ .tabs #one-tab,
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #two:checked ~ .tabs #two-tab,
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #three:checked ~ .tabs #three-tab,
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #four:checked ~ .tabs #four-tab,
+.App .profileMain .profile .profileBody .profileWrapper .body .doctorAppointments #five:checked ~ .tabs #five-tab {
+  background: rgba(255, 255, 255, 0.9647058824);
+  color: #eb5757;
+  border-top: 3px solid #eb5757;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal {
+  --bs-modal-width: 700px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal .formBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow {
+  width: 45%;
+  margin-bottom: 20px;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow label {
+  width: 100%;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow .formInput {
+  width: 70%;
+  display: inline;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow .formInput input {
+  width: 100%;
+  border: 1px solid #a1a0a0;
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal .formBody .formRow .formInput select {
+  width: 100%;
+  border: 1px solid #a1a0a0;
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal .formButtonRow {
+  width: 100%;
+}
+.App .profileMain .profile .profileBody .profileWrapper .modal .formButtonRow button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.App .policy {
+  margin-bottom: 50px;
+  transition: opacity 1s ease;
+}
+.App .policy .policyBanner .banner .bannerText {
+  background-image: url(../assets/images/privacyBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 70px 70px;
+  border-bottom: 8px solid #eb5757;
+  padding: 170px 0 0 0;
+}
+.App .policy .policyBanner .banner .bannerText .bannerInfo {
+  height: 150px;
+  text-align: center;
+}
+.App .policy .policyBanner .banner .bannerText .bannerInfo p {
+  font-family: "poppinExtraBold";
+  font-size: 50px;
+}
+.App .policy .policyBanner .banner .bannerText .bannerInfo p span {
+  color: #eb5757;
+}
+.App .policy .policyMain .termsOfUse {
+  list-style: none;
+}
+.App .policy .policyMain .card {
+  margin-top: 50px;
+}
+.App .policy .policyMain .card .card-body .paragraphs .mainHeading {
+  font-weight: 700px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.App .policy .policyMain .card .card-body .paragraphs .normalPara {
+  font-size: 14px;
+}
+.App .policy .policyMain .card .card-body .accordion .accordion-item .accordion-header .accordion-button {
+  background-color: white;
+  color: #eb5757;
+}
+.App .policy .policyMain .card .card-body .accordion .accordion-item .accordion-header .accordion-button:focus {
+  background-color: white;
+  outline: none;
+  box-shadow: none;
+}
+
+.loginOthers > div {
+  width: 100%;
+}
+
+.loginOthers {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.loginOthers button {
+  border: 1px solid #d3d3d3;
+  padding: 10px 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  width: 100%;
+  font-size: 14px;
+  background-color: rgba(30, 20, 40, 0);
+}
+.loginOthers button i {
+  color: blue;
+}
+.loginOthers button img {
+  width: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.insureKaro {
+  margin-bottom: 50px;
+}
+.insureKaro .mainBodyInner .rowButton {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.appointmentDetails .mainBody {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.mainBodyHeading2 {
+  background-color: transparent;
+  color: #f13e3e;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  height: 90px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.mainBodyHeading2 P {
+  margin-left: 20px;
+}
+
+.cardMargin {
+  margin-top: 30px;
+}
+
+.mainBodySection {
+  margin-left: 30px;
+  flex-direction: column;
+}
+.mainBodySection .subHeading {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+}
+.mainBodySection .subHeading .buttonOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #f13e3e;
+}
+.mainBodySection .subHeading .uploadButton {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+
+.navigateBackButton {
+  background-color: transparent;
+  color: #f13e3e;
+  margin-right: 10px;
+  font-size: 35px;
+  margin-left: 20px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-top: 70px;
+}
+.login .card {
+  width: 50%;
+}
+.login .card .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login .card .card-body .loginOuter {
+  width: 80%;
+}
+.login .card .card-body .loginOuter .loginHeader {
+  margin-bottom: 20px;
+}
+.login .card .card-body .loginOuter .loginBody .fields1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.login .card .card-body .loginOuter .loginBody .fields {
+  margin-bottom: 10px;
+}
+.login .card .card-body .loginOuter .loginBody .fields button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.login .card .card-body .loginOuter .loginBody .fields label {
+  display: block;
+}
+.login .card .card-body .loginOuter .loginBody .fields input[type=email],
+.login .card .card-body .loginOuter .loginBody .fields input[type=text],
+.login .card .card-body .loginOuter .loginBody .fields input[type=password] {
+  width: 100%;
+  height: 33px;
+  border: 1px solid grey;
+  border-radius: 7px;
+  outline: none;
+  padding: 10px;
+}
+
+.greet .greetWrapperButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.greet .greetWrapperButton button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  white-space: nowrap;
+  width: auto;
+}
+.greet .greetWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.greet .greetWrapper p {
+  color: #eb5757;
+  font-size: 20px;
+  font-weight: 600;
+}
+.greet .greetWrapper img {
+  width: 250px;
+}
+
+#myDialog {
+  border: none;
+  min-width: 300px;
+  box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.18);
+  flex-shrink: 0;
+  border-radius: 15px;
+  max-width: 484px;
+  -webkit-backdrop-filter: brightness(10px);
+          backdrop-filter: brightness(10px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#myDialog .dialogMain {
+  position: relative;
+}
+#myDialog .closeButton {
+  cursor: pointer;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  font-size: 23px;
+}
+#myDialog .dialogInner h1 {
+  color: #09081f;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#myDialog .authPopupButton {
+  width: 100%;
+  background-color: #eb5757;
+  color: white;
+  height: 45px;
+}
+#myDialog .authPopupButton:disabled {
+  background-color: grey;
+}
+#myDialog .authFormMain .authField {
+  position: relative;
+  margin-bottom: 15px;
+}
+#myDialog .authFormMain .formIcon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 23px;
+  color: rgba(9, 8, 31, 0.4);
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+#myDialog .authFormMain .authField .formFieldsInner input {
+  padding-left: 45px;
+  border: none;
+  background: rgba(67, 55, 255, 0.05);
+  color: #000;
+}
+#myDialog .authFormMain .authField .formFieldsInner input:focus {
+  padding-left: 45px;
+  border: 1px solid #4337ff;
+  box-shadow: none;
+}
+#myDialog .authFormMain .authField .formFieldsInner label {
+  left: 30px;
+  color: rgba(9, 8, 31, 0.4);
+}
+#myDialog .authFormMain {
+  margin: 20px 40px;
+}
+#myDialog .authFieldsInner {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  width: 100%;
+}
+#myDialog .authFieldsInner button {
+  border: none;
+  height: 60px;
+  border-radius: 10px;
+  background: rgba(67, 55, 255, 0.05);
+}
+#myDialog .authFieldsInner button p {
+  margin: 0;
+  font-size: 12px;
+}
+#myDialog .googleButton {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+#myDialog .googleButton:hover {
+  background-color: rgb(216, 216, 216);
+}
+#myDialog .linkedInButton:hover {
+  background-color: rgb(216, 216, 216);
+}
+#myDialog .linkedInButton {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+#myDialog .googleButton img {
+  width: 24px;
+}
+#myDialog .linkedInButton img {
+  width: 24px;
+}
+
+#myDialog1 {
+  border: none;
+  box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.18);
+  min-width: 300px;
+  border-radius: 15px;
+  max-width: 484px;
+  -webkit-backdrop-filter: brightness(10px);
+          backdrop-filter: brightness(10px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#myDialog1 .signupPopupButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#myDialog1 .signupPopupButton button {
+  background-color: white;
+  color: #eb5757;
+}
+#myDialog1 .dialogMain {
+  position: relative;
+}
+#myDialog1 .closeButton {
+  cursor: pointer;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  font-size: 23px;
+}
+#myDialog1 .dialogInner h1 {
+  color: #09081f;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#myDialog1 .authPopupButton {
+  width: 100%;
+  background-color: #eb5757;
+  color: white;
+  height: 45px;
+}
+#myDialog1 .authPopupButton:disabled {
+  background-color: grey;
+}
+#myDialog1 .authFormMain .authField {
+  position: relative;
+  margin-bottom: 15px;
+}
+#myDialog1 .authFormMain .formIcon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 23px;
+  color: rgba(9, 8, 31, 0.4);
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+#myDialog1 .authFormMain .authField .formFieldsInner input {
+  padding-left: 45px;
+  border: none;
+  background: rgba(67, 55, 255, 0.01);
+  border: 1px solid #fff;
+}
+#myDialog1 .authFormMain .authField .formFieldsInner input:focus {
+  padding-left: 45px;
+  border: 1px solid #4337ff;
+  box-shadow: none;
+}
+#myDialog1 .authFormMain .authField .formFieldsInner label {
+  left: 30px;
+  color: rgba(9, 8, 31, 0.4);
+}
+#myDialog1 .authFormMain {
+  margin: 20px 40px;
+}
+#myDialog1 .authFieldsInner {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  width: 100%;
+}
+#myDialog1 .authFieldsInner button {
+  border: none;
+  height: 60px;
+  border-radius: 10px;
+  background: rgba(67, 55, 255, 0.05);
+}
+#myDialog1 .authFieldsInner button p {
+  margin: 0;
+  font-size: 12px;
+}
+#myDialog1 .googleButton {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+#myDialog1 .googleButton:hover {
+  background-color: rgb(216, 216, 216);
+}
+#myDialog1 .linkedInButton:hover {
+  background-color: rgb(216, 216, 216);
+}
+#myDialog1 .linkedInButton {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#myDialog1 .googleButton img {
+  width: 24px;
+}
+#myDialog1 .linkedInButton img {
+  width: 24px;
+}
+
+#myDialog3 {
+  border: none;
+  box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.18);
+  flex-shrink: 0;
+  min-width: 300px;
+  border-radius: 15px;
+  max-width: 484px;
+  -webkit-backdrop-filter: brightness(10px);
+          backdrop-filter: brightness(10px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#myDialog3 .dialogMain {
+  position: relative;
+}
+#myDialog3 .closeButton {
+  cursor: pointer;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  font-size: 23px;
+}
+#myDialog3 .dialogInner h1 {
+  color: #09081f;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#myDialog3 .authPopupButton {
+  width: 100%;
+  background-color: #eb5757;
+  color: white;
+  height: 45px;
+}
+#myDialog3 .authPopupButton:disabled {
+  background-color: grey;
+}
+#myDialog3 .authFormMain .authField {
+  position: relative;
+  margin-bottom: 25px;
+}
+#myDialog3 .authFormMain .formIcon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 23px;
+  color: rgba(9, 8, 31, 0.4);
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+#myDialog3 .authFormMain .authField .formFieldsInner input {
+  padding-left: 45px;
+  border: none;
+  background: rgba(67, 55, 255, 0.05);
+}
+#myDialog3 .authFormMain .authField .formFieldsInner input:focus {
+  padding-left: 45px;
+  border: 1px solid #4337ff;
+  box-shadow: none;
+}
+#myDialog3 .authFormMain .authField .formFieldsInner label {
+  left: 30px;
+  color: rgba(9, 8, 31, 0.4);
+}
+#myDialog3 .authFormMain {
+  margin: 20px 40px;
+}
+#myDialog3 .authFieldsInner {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  width: 100%;
+}
+#myDialog3 .authFieldsInner button {
+  border: none;
+  height: 60px;
+  border-radius: 10px;
+  background: rgba(67, 55, 255, 0.05);
+}
+#myDialog3 .authFieldsInner button p {
+  margin: 0;
+  font-size: 12px;
+}
+#myDialog3 .googleButton {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#myDialog3 .googleButton:hover {
+  background-color: rgb(216, 216, 216);
+}
+#myDialog3 .linkedInButton:hover {
+  background-color: rgb(216, 216, 216);
+}
+#myDialog3 .linkedInButton {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#myDialog3 .googleButton img {
+  width: 24px;
+}
+#myDialog3 .linkedInButton img {
+  width: 24px;
+}
+
+.totalCostingHr {
+  width: 95%;
+}
+
+.noDataImgDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noDataImgDiv .noDataImage {
+  width: 400px;
+}
+
+.formInputRelative {
+  position: relative;
+}
+.formInputRelative .errorMessage {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  font-size: 13px;
+}
+
+.beneficiaryPopupMain #modal22 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.beneficiaryPopupMain .beneErrorButton button {
+  background-color: #818181 !important;
+}
+
+.error input {
+  border: 1px solid red !important;
+}
+
+.error .errorMessage {
+  color: red;
+}
+
+.signupError .errorMessage {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.cardNumberDiv {
+  position: relative;
+}
+.cardNumberDiv .cardNumberImg {
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  right: 10px;
+}
+
+.inputShowPassword {
+  position: relative;
+}
+.inputShowPassword .inputShowPasswordButton {
+  position: absolute;
+  top: 53%;
+  right: 64px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: grey;
+  font-size: 22px;
+}
+
+.inputShowPassword2 {
+  position: relative;
+}
+.inputShowPassword2 .inputShowPasswordButton2 {
+  position: absolute;
+  top: 53%;
+  right: 0px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: grey;
+  font-size: 22px;
+}
+
+.inputShowPassword3 {
+  position: relative;
+}
+.inputShowPassword3 .inputShowPasswordButton3 {
+  position: absolute;
+  top: 53%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: grey;
+  font-size: 22px;
+}
+
+.promoOuter {
+  position: relative;
+}
+.promoOuter .promoSubmitButton {
+  position: absolute !important;
+  top: 57%;
+  right: 12px;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  padding: 7px 0px;
+  width: 112px;
+}
+.promoOuter .promoSubmitButton2 {
+  position: absolute !important;
+  top: 57%;
+  right: -18px;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  padding: 7px 0px;
+  width: 112px;
+}
+
+.bookDoctorBanner .slick-slider,
+.pharmacyBanner .slick-slider,
+.profileBanner .slick-slider,
+.insuranceBanner .slick-slider {
+  z-index: 0;
+}
+.bookDoctorBanner .slick-arrow,
+.pharmacyBanner .slick-arrow,
+.profileBanner .slick-arrow,
+.insuranceBanner .slick-arrow {
+  display: none !important;
+}
+
+.tableRedButton button {
+  background-color: transparent;
+  color: #eb5757;
+}
+
+table thead tr th {
+  white-space: nowrap;
+}
+
+.presciptionModalId,
+.reportModalId {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+}
+.presciptionModalId .ModalPopupInner,
+.reportModalId .ModalPopupInner {
+  padding: 20px 15px 20px 15px;
+  position: relative;
+}
+.presciptionModalId .ModalPopupInner .prescriptionModalClose,
+.reportModalId .ModalPopupInner .prescriptionModalClose {
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  font-size: 20px;
+  background-color: transparent;
+}
+.presciptionModalId .ModalPopupInner .prescriptionField,
+.reportModalId .ModalPopupInner .prescriptionField {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.presciptionModalId .ModalPopupInner .prescriptionField span:first-child,
+.reportModalId .ModalPopupInner .prescriptionField span:first-child {
+  color: #eb5757;
+}
+
+.signUpButton:disabled {
+  background-color: grey;
+}
+
+#pushNotifyId {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  z-index: 100000000000000000000000000000;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid grey;
+  min-width: 300px;
+}
+#pushNotifyId h2 {
+  font-size: 20px;
+  font-family: 700;
+}
+
+.Toastify .Toastify__progress-bar--default {
+  background: red;
+}
+
+.error404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+.error404 img {
+  width: 100%;
+  min-width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 400px;
+}
+
+.table tbody tr td a {
+  color: #eb5757;
+  text-decoration: none;
+}
+
+.docTypeDetails {
+  text-align: center;
+}
+.docTypeDetails span {
+  color: #eb5757;
+}
+
+.themeButton {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  white-space: nowrap;
+  padding: 10px 30px;
+  margin-top: 15px;
+}
+
+.cartFlexButton {
+  display: flex;
+  justify-content: flex-end;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.themeButton2 {
+  display: block;
+  width: 68px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 0px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+  white-space: nowrap;
+}
+
+.reviewDialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  border-radius: 10px;
+}
+.reviewDialog .reviewMain {
+  position: relative;
+  padding: 10px 15px;
+}
+.reviewDialog .reviewMain .closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  font-size: 20px;
+}
+.reviewDialog .reviewMain p {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+.reviewDialog .reviewMain .reviewFieldButton {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px 0;
+}
+.reviewDialog .reviewMain .reviewFieldButton button {
+  display: block;
+  width: 150px;
+  background-color: #eb5757;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 40px;
+  position: relative;
+  background-image: url(../assets/images/buttonBackground.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  background-position: -110px 0;
+}
+.reviewDialog .reviewMain .reviewFields {
+  display: flex;
+  flex-direction: column;
+}
+.reviewDialog .reviewMain .reviewFields input {
+  resize: none;
+  outline: none;
+  border: 1px solid rgb(196, 196, 196);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+.reviewDialog .reviewMain .reviewFields textarea {
+  resize: none;
+  outline: none;
+  border: 1px solid rgb(196, 196, 196);
+  padding: 5px;
+  border-radius: 5px;
+}
+.reviewDialog .reviewMain .reviewFields .stars i {
+  cursor: pointer;
+  font-size: 25px;
+}
+.reviewDialog .reviewMain .reviewFields .stars .ri-star-fill {
+  color: gold;
+}
+.reviewDialog .reviewMain .reviewFields .stars .ri-star-line {
+  color: grey;
+}
+
+.subHeaderIcon {
+  position: relative;
+}
+.subHeaderIcon .itemSearchDiv {
+  position: absolute;
+  background-color: white;
+  right: 0;
+  top: 56px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+.subHeaderIcon .itemSearchDiv a {
+  text-decoration: none;
+  color: black;
+}
+.subHeaderIcon .itemSearchDiv ul {
+  list-style: none;
+  width: 300px;
+  margin-top: 15px;
+  padding: 0;
+}
+.subHeaderIcon .itemSearchDiv ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 5px 20px 5px 20px;
+}
+.subHeaderIcon .itemSearchDiv ul li:hover {
+  background-color: rgba(0, 0, 0, 0.0823529412);
+}
+.subHeaderIcon .itemSearchDiv ul li img {
+  margin-right: 5px;
+}
+.subHeaderIcon .itemSearchDiv .searchedProductImg {
+  width: 40px !important;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=style.css.map */
