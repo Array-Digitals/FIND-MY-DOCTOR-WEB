@@ -88,7 +88,6 @@ export const Login = () => {
                                         Sign In
                                     </button>
                                 </div>
-
                             </form>
                         </div>
                     </div>
