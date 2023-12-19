@@ -10,7 +10,7 @@ const ProductUploadBulk = () => {
 
     }
     const submitForm = () => {
-
+        setIsLoading(true);
     }
     return (
         <React.Fragment>

@@ -63,11 +63,11 @@ export const Login = () => {
                             <form className="loginBody" onSubmit={formSubmit}>
                                 <div className="fields">
                                     <label htmlFor="emailLogin">Email</label>
-                                    <input type="email" name='email' onChange={getLoginInput}/>
+                                    <input type="email" name='email' onChange={getLoginInput} required/>
                                 </div>
                                 <div className="fields fieldPasswordRelative">
                                     <label htmlFor="passwordLogin">Password</label>
-                                    <input type={isPasswordVisible ? 'text' : 'password'} name='password' onChange={getLoginInput} />
+                                    <input type={isPasswordVisible ? 'text' : 'password'} name='password' onChange={getLoginInput} required />
                                     <i className="ri-eye-line" onClick={() => {setIsPasswordVisible(!isPasswordVisible)}} />
                                 </div>
                                 {/* <div className="fields fields1">

@@ -143,8 +143,8 @@ export const Dashboard = () => {
     }
   }
   const chartOptions = {
-    series: [totalUserState?.Total_Users, totalUserState?.Active_Users] || [0],
-    labels: ['Total', 'Active'],
+    series: [totalUserState?.Total_Users] || [0],
+    labels: ['Total'],
     chart: {
       type: 'donut',
       toolbar: {
