@@ -320,6 +320,16 @@ export const Sidebar = () => {
                           <span>Add Product</span>
                         </NavLink>
                       </li>
+                      <li>
+                        <NavLink
+                          to={ROUTES.PRODUCT_UPLOAD_FORM}
+                          className="navLinkC "
+                          activeclassname="active"
+                        >
+                          <i className="bi bi-plus-lg" />
+                          <span>Upload Product</span>
+                        </NavLink>
+                      </li>
 
                       <li>
                         <NavLink

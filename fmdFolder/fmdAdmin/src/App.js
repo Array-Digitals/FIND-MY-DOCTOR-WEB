@@ -72,6 +72,7 @@ import { InsuranceProviderBooking } from './Main/WebPage/Insurance/providerInsur
 import { UserUpdateForm } from './Main/WebPage/user/userUpdateForm';
 import { NewsLetter } from './Main/WebPage/Services/newsLetter';
 import { ContactUsForm } from './Main/WebPage/Services/contactUsForm';
+import ProductUploadBulk from './Main/WebPage/pharmacy/productBulkUploading';
 
 export const SidebarContext = createContext({ sideBar: false, setSideBar: () => { } })
 
@@ -216,6 +217,7 @@ function App() {
                         <Route path={ROUTES.PRODUCT_FORM} element={< ProductForm />} />
                         <Route path={ROUTES.BRAND_FORM} element={< BrandForm />} />
                         <Route path={ROUTES.CATEGORY_FORM} element={< CategoryForm />} />
+                        <Route path={ROUTES.PRODUCT_UPLOAD_FORM} element={< ProductUploadBulk />} />
                       </>
                     )}
                     {userAuth.pharmacy.manage === 1 && (

@@ -35,6 +35,7 @@ export const ROUTES = {
     PHARMACY_FORM:"pharmacy_form",
     PRODUCT_FORM:"product_form",
     PRODUCT_UPDATE_FORM:"product_update_form",
+    PRODUCT_UPLOAD_FORM:"product-upload",
     BRAND_FORM:"brand_form",
     PROMO_CODE:"promo_codes",
     NEWS_LETTER:"news_letter",
