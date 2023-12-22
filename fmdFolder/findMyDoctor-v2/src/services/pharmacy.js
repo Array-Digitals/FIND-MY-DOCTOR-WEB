@@ -126,10 +126,11 @@ const PharmacyBuy = () => {
         };
         return axios.request(config)
     }
+   
 
 
     return {
-        getSearchProduct, getBrandProduct, getCategoryProduct, getFrequentlyBought, getCategory, getBrand, getProductByBrand, getSingleProduct, postPharmaBooking, getActivePharmBooking, getHistoryPharmBooking
+     getSearchProduct, getBrandProduct, getCategoryProduct, getFrequentlyBought, getCategory, getBrand, getProductByBrand, getSingleProduct, postPharmaBooking, getActivePharmBooking, getHistoryPharmBooking
     }
 
 }

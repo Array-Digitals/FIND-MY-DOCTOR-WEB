@@ -82,6 +82,11 @@ const ProductItem = () => {
 
     const AddToCart = (e) => {
         e.preventDefault();
+        if (productData.quantity == 0) {
+            toast.error('Product is out of stock')
+            return
+        }
+
         setIsLoading(true);
         if (getToken(rememberGet())) {
             const cartFields = { quantity: count, itemId: productItemId };
@@ -96,6 +101,7 @@ const ProductItem = () => {
             setIsLoading(false);
 
         }
+
     }
 
     useEffect(() => {
@@ -134,7 +140,11 @@ const ProductItem = () => {
                                     <div className="row g-5">
                                         <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" align="center">
                                             <div className="itemImageMain">
-                                                <div className='itemImageInner'>
+                                                <div className='itemImageInner outOfStockParent'>
+                                                    {
+                                                        productData.quantity == 0 &&
+                                                        <p className='outOfStock'>Out of Stock</p>
+                                                    }
                                                     <img loading="lazy" src={`${imageUrl}/${productData.featured_img}`} alt="reload page" />
                                                 </div>
 
@@ -180,6 +190,7 @@ const ProductItem = () => {
                                                     <div className="counter">
                                                         <div className="counterNumber">
                                                             <p className="number">{count}</p>
+                                                            {/* {console.log(count, 'counttt')} */}
                                                         </div>
 
                                                         <div className="counterButtons">

@@ -473,6 +473,19 @@ const AdminService = () => {
         };
         return axios.request(config)
     }
+    const bulkUploadTest = (data) => {
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: `${baseUrl}/lab/test/bulk`,
+            headers: {
+                'Authorization': `Bearer ${newToken}`,
+                'Content-Type': 'multipart/form-data'
+            },
+            data:data
+        };
+        return axios.request(config)
+    }
 
     const getTestAssign = () => {
         let config = {
@@ -687,6 +700,7 @@ const AdminService = () => {
         getDoctorBookingDiscusion,
         getSingleCategories,
         getTestAssignHistory,
+        bulkUploadTest,
         doctorRegister,
         doctorUpdate,
         patchSpecilitY,

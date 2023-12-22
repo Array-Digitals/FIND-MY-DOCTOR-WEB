@@ -191,7 +191,7 @@ const pharmacyService = () => {
         return axios.request(config)
     }
 
-    const getOrderCompletion = (id)=>{
+    const getOrderCompletion = (id) => {
         let config = {
             method: 'get',
             maxBodyLength: Infinity,
@@ -201,12 +201,12 @@ const pharmacyService = () => {
                 'Content-Type': 'application/json'
             },
         };
-    
+
         return axios.request(config)
 
     }
 
-  
+
 
     const deleteProducts = (data) => {
         let config = {
@@ -265,7 +265,21 @@ const pharmacyService = () => {
         return axios.request(config)
     }
 
+    const postProductBulk = (data) => {
+        let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: `${baseUrl}/products/bulk`,
+            headers: {
+                'Authorization': `Bearer ${newToken}`,
+                'Content-Type': 'multipart/form-data',
+            },
+            data: data
+        };
+        return axios.request(config)
+    }
 
-    return { productActivity,getOrderCompletion, postOrderCompletion, productUpdate, getSingleBrand, deleteBrands, deleteCategories, deleteProducts, postOrderTracking, getOrderTracking, getSingleCategory, brandUpdate, categoryUpdate, categoryPost, brandPost, brandGet, categoriesGet, productPost, ProductGet, getSingleProduct }
+
+    return { postProductBulk, productActivity, getOrderCompletion, postOrderCompletion, productUpdate, getSingleBrand, deleteBrands, deleteCategories, deleteProducts, postOrderTracking, getOrderTracking, getSingleCategory, brandUpdate, categoryUpdate, categoryPost, brandPost, brandGet, categoriesGet, productPost, ProductGet, getSingleProduct }
 }
 export default pharmacyService;

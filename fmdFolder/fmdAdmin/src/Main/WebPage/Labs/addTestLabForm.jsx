@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 
 export const AddTestLabForm = () => {
 
-    const { getAllTest, getLab, testRegister, testToLabRegister } = AdminService();
+    const { getAllTest, getLab, testRegister, bulkUploadTest, testToLabRegister } = AdminService();
     const [labName, setLabName] = useState([]);
     const [allTest, setAllTest] = useState([]);
     const [isBulk, setIsBulk] = useState(false);
@@ -14,7 +14,10 @@ export const AddTestLabForm = () => {
         time: "00:00",
         lab: 0,
         amount: "",
+        csvFile: ""
     })
+
+    const [csvFile, setCsvFile] = useState()
     const getLoginInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
@@ -32,14 +35,27 @@ export const AddTestLabForm = () => {
     }
     const formSubmit = (e) => {
         e.preventDefault()
-        const testToLabSubmit = { ...TestToLab }
-        console.log(testToLabSubmit)
-        testToLabRegister(testToLabSubmit).then((res) => {
-            console.log(res)
-            toast.success('Test Added');
-        }).catch((err) => {
-            console.log(err.message)
-        })
+        if(!isBulk){
+            const testToLabSubmit = {...TestToLab }
+            console.log(testToLabSubmit)
+            testToLabRegister(testToLabSubmit).then((res) => {
+                console.log(res)
+                toast.success('Test Added');
+            }).catch((err) => {
+                console.log(err.message)
+            })
+        }
+        else{
+            const formData = new FormData()
+            formData.set('csvFile', csvFile);
+            formData.set('labId', TestToLab.lab);
+            console.log(formData, 'foommmm');
+            bulkUploadTest(formData).then((res) => {
+                console.log(res, 'response');
+            }).catch((res) => {
+                console.log(res.response, 'error');
+            })
+        }
     }
 
     useEffect(() => {
@@ -57,6 +73,7 @@ export const AddTestLabForm = () => {
             console.log(error);
         });
     }, []);
+
 
 
 
@@ -126,12 +143,6 @@ export const AddTestLabForm = () => {
 
                                                     </div>
                                                 </div>
-                                                {/* <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-                                                    <div className="fields">
-                                                        <label htmlFor="timeId">Time</label>
-                                                        <input type="time" id='timeId' name='time' placeholder='Enter Time...' required onChange={getLoginInput} />
-                                                    </div>
-                                                </div> */}
                                                 <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
                                                     <div className="fields">
                                                         <label htmlFor="amountId">Amount</label>
@@ -143,7 +154,7 @@ export const AddTestLabForm = () => {
                                             :
                                             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
                                                 <div className="fields">
-                                                    <input className='form-control' type="file" />
+                                                    <input className='form-control' type="file" name='csvFile' onChange={(e)=>setCsvFile(e.target.files[0])} />
                                                 </div>
                                             </div>
                                         }

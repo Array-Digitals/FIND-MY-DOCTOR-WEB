@@ -27,6 +27,11 @@ const Signup = () => {
         e.preventDefault();
         setIsShowPass(!isShowPass)
     }
+    const [isShowPass1, setIsShowPass1] = useState(false)
+    const showPass1 = (e) => {
+        e.preventDefault();
+        setIsShowPass1(!isShowPass1)
+    }
 
     const [signup, setSignup] = useState({
         fullname: "",
@@ -195,8 +200,11 @@ const Signup = () => {
                                                         <i className="ri-eye-line"></i>
                                                     </button>
                                                 </div>
-                                                <div className="passwordFieldReg">
-                                                    <input type="password" placeholder='Confirm Password...' onChange={handleConfirmPasswordChange} required />
+                                                <div className="passwordFieldReg inputShowPassword2">
+                                                    <input type={isShowPass1 ? 'text' : 'password'} placeholder='Confirm Password...' onChange={handleConfirmPasswordChange} required />
+                                                    <button className='inputShowPasswordButton2' onClick={showPass1}>
+                                                        <i className="ri-eye-line"></i>
+                                                    </button>
                                                 </div>
                                                 {!passwordsMatch && (
                                                     <div className='passwordMatch' >Passwords do not match</div>
@@ -204,15 +212,7 @@ const Signup = () => {
                                             </div>
 
                                         </div>
-                                        {/* <div className="infoDiv">
-                                            <div className="rememberDiv">
-                                            <input type="checkbox" />
-                                            <span>Remember me</span>
-                                            </div>
-                                            <div className="forgetDiv">
-                                            <Link>Forget Password?</Link>
-                                            </div>
-                                        </div> */}
+
                                         {phoneError &&
                                             <div className="signupError">
                                                 <p className="errorMessage">* Enter Valid Phone Number</p>
@@ -233,7 +233,6 @@ const Signup = () => {
                                                 scope="openid profile email"
                                                 discoveryDocs="claims_supported"
                                                 access_type="offline"
-                                                // onResolve={ ({ provider, data }) => { console.log(provider, data)}}
                                                 onResolve={({ provider, data }) => responseGoogle(provider, data)}
                                                 onReject={(err) => {
                                                     console.log(err);
@@ -245,31 +244,6 @@ const Signup = () => {
                                                 </button>
                                                 {/* <GoogleLoginButton /> */}
                                             </LoginSocialGoogle>
-
-                                            {/* <LoginSocialFacebook
-                                                appId="1245060279487561"
-
-                                                onResolve={(res) => {
-                                                    console.log(res);
-                                                }}
-                                                onReject={(err) => {
-                                                    console.log(err);
-                                                }}
-                                            >
-                                                <button>
-                                                    <img loading="lazy" src={faceBookImg} alt="reload page" />
-                                                    Facebook Sign In
-                                                </button>
-                                            </LoginSocialFacebook> */}
-
-
-                                            {/* <FacebookLogin
-                                                appId="1088597931155576"
-                                                autoLoad={true}
-                                                fields="name,email,picture"
-                                                onClick={componentClicked}
-                                                callback={responseFacebook}
-                                            />, */}
 
 
                                         </div>

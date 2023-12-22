@@ -142,62 +142,174 @@ export const Dashboard = () => {
       },
     }
   }
-  const chartOptions = {
-    series: [totalUserState?.Total_Users] || [0],
-    labels: ['Total'],
+  const Line2 = {
     chart: {
-      type: 'donut',
-      toolbar: {
-        show: true,
-        tools: {
-          download: true,
-        },
+      id: 'spark1',
+      group: 'sparks',
+      type: 'line',
+      height: 80,
+      sparkline: {
+        enabled: true
       },
+      dropShadow: {
+        enabled: true,
+        top: 1,
+        left: 1,
+        blur: 2,
+        opacity: 0.2,
+      }
     },
-    colors: ['#eb6363', '#e92b2b'],
-    legend: {
-      position: 'bottom'
+    series: [{ data: [21, 66, 12, 12, 44, 25, 59, 59, 9, 25] }],
+    stroke: { curve: 'smooth' },
+    markers: { size: 0 },
+    grid: {
+      padding: {
+        top: 20,
+        bottom: 20,
+        left: 20
+      }
     },
-    responsive: [
+    colors: ['#e92b2b'],
+    tooltip: {
+      x: {
+        show: false
+      },
+    }
+  }
+  const Line3 = {
+    chart: {
+      id: 'spark1',
+      group: 'sparks',
+      type: 'line',
+      height: 80,
+      sparkline: {
+        enabled: true
+      },
+      dropShadow: {
+        enabled: true,
+        top: 1,
+        left: 1,
+        blur: 2,
+        opacity: 0.2,
+      }
+    },
+    series: [{ data: [25, 59, 36, 66, 25, 25, 9, 41, 12, 44] }],
+    stroke: { curve: 'smooth' },
+    markers: { size: 0 },
+    grid: {
+      padding: {
+        top: 20,
+        bottom: 20,
+        left: 20
+      }
+    },
+    colors: ['#e92b2b'],
+    tooltip: {
+      x: {
+        show: false
+      },
+    }
+  }
+  const chartOptions = {
+    // series: [totalUserState?.Total_Users] || [0],
+    // labels: ['Total User'],
+    // chart: {
+    //   type: 'donut',
+    //   toolbar: {
+    //     show: true,
+    //     tools: {
+    //       download: true,
+    //     },
+    //   },
+    // },
+    // colors: ['#eb6363', '#e92b2b'],
+    // legend: {
+    //   position: 'bottom'
+    // },
+    // dataLabels: {
+    //   enabled: false
+    // },
+    // responsive: [
+    //   {
+    //     breakpoint: 480,
+    //     options: {
+    //       chart: {
+    //         width: 200,
+    //       },
+    //     },
+    //   },
+    // ],
+
+    chart: {
+      type: 'bar'
+    },
+    series: [
       {
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 200,
-          },
-        },
-      },
+        name: 'Total Users',
+        data: [totalUserState?.Total_Users] || [0],
+      }
     ],
+    colors: ['#eb6363', '#e92b2b'],
+    xaxis: {
+      categories: ['Total Users']
+    },
+    yaxis: {
+      labels: {
+        show: false
+      }
+    },
   };
   const donutchart1 = {
-    series: [totalProductState?.Total_Products ? totalProductState?.Total_Products : 0],
-    labels: ['Total Products'],
+    // series: [totalProductState?.Total_Products ? totalProductState?.Total_Products : 0],
+    // labels: ['Total Products'],
+    // chart: {
+    //   type: 'donut',
+    //   toolbar: {
+    //     show: true,
+    //     tools: {
+    //       download: true,
+    //     },
+    //   },
+    // },
+    // colors: ['#eb6363', '#e92b2b'],
+    // legend: {
+    //   position: 'bottom'
+    // },
+    // dataLabels: {
+    //   enabled: false
+    // },
+    // responsive: [
+    //   {
+    //     breakpoint: 480,
+    //     options: {
+    //       chart: {
+    //         width: 200,
+    //       },
+    //     },
+    //   },
+    // ],
+
+
     chart: {
-      type: 'donut',
-      toolbar: {
-        show: true,
-        tools: {
-          download: true,
-        },
-      },
+      type: 'bar'
     },
-    colors: ['#eb6363', '#e92b2b'],
-    legend: {
-      position: 'bottom'
-    },
-    dataLabels: {
-      enabled: false
-    },
-    responsive: [
+    series: [
       {
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 200,
-          },
-        },
-      },
+        name: 'Products',
+        data: [totalProductState?.Total_Products] || [0],
+      }
     ],
+    colors: ['#eb6363', '#e92b2b'],
+    xaxis: {
+      categories: ['Total Products']
+    },
+    yaxis: {
+      labels: {
+        show: false
+      }
+    },
+
+
   };
   const areaChart1 = {
     chart: {
@@ -408,12 +520,12 @@ export const Dashboard = () => {
     series: [
       {
         name: 'Series 1',
-        data: [totalClientState?.doctors_client, totalClientState?.labs_client, totalClientState?.Pharmacy_client] || [0],
+        data: [totalClientState?.doctors_client, totalClientState?.labs_client, totalClientState?.Pharmacy_client, totalProductState?.Total_Products] || [0],
       }
     ],
     colors: ['#eb6363', '#e92b2b'],
     xaxis: {
-      categories: ['Doctors', 'Labs', 'Pharmacy',]
+      categories: ['Doctors', 'Labs', 'Pharmacy', 'Products']
     },
     yaxis: {
       labels: {
@@ -492,7 +604,7 @@ export const Dashboard = () => {
                                   <p className='category'>{totalDataState?.total_brands}</p>
                                   <p>Brands</p>
                                 </div>
-                                <ReactApexChart options={Line1} series={Line1?.series} type="line" />
+                                <ReactApexChart options={Line2} series={Line2?.series} type="line" />
                               </div>
                             </div>
                           </div>
@@ -511,7 +623,7 @@ export const Dashboard = () => {
                                   <p className='category'>{totalDataState?.total_labs}</p>
                                   <p>Labs</p>
                                 </div>
-                                <ReactApexChart options={Line1} series={Line1?.series} type="line" />
+                                <ReactApexChart options={Line3} series={Line3?.series} type="line" />
                               </div>
                             </div>
                           </div>
@@ -526,13 +638,13 @@ export const Dashboard = () => {
                                 <small>Current</small>
                               </div>
                               {totalUserState.Active_Users && (
-                                <ReactApexChart options={chartOptions} series={chartOptions?.series} type="donut" height={300} />
+                                <ReactApexChart options={chartOptions} series={chartOptions?.series} type="bar" height={245} />
                               )}
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+                      {/* <div className="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 ">
                         <div className="card">
                           <div className="card-body">
                             <div className="chart">
@@ -542,13 +654,13 @@ export const Dashboard = () => {
                               </div>
                               {
                                 totalProductState.Total_Products &&
-                                <ReactApexChart options={donutchart1} series={donutchart1?.series} type="donut" height={300} />
+                                <ReactApexChart options={donutchart1} series={donutchart1?.series} type="bar" height={245} />
                               }
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+                      </div> */}
+                      <div className="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 ">
                         <div className="card">
                           <div className="card-body">
                             <div className="chart">

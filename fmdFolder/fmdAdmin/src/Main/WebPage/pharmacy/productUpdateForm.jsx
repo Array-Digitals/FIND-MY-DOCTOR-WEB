@@ -318,7 +318,7 @@ export const ProductUpdateForm = () => {
                                                         <label htmlFor="productActive" className='toggleLabel'>Activity</label>
                                                         <div className="toggleButton">
                                                             <label className="switch">
-                                                                <input type="checkbox" checked={activity === 1} onChange={(e) => { setSetActivityState(e.target.checked ? 1 : 0) }} />
+                                                                <input type="checkbox" checked={activity === 0} onChange={(e) => { setSetActivityState(e.target.checked ? 0 : 1) }} />
                                                                 <span className="slider round"></span>
                                                             </label>
                                                         </div>
