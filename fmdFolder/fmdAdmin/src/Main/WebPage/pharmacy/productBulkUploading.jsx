@@ -11,6 +11,7 @@ const ProductUploadBulk = () => {
     const [csvFile, setCsvFile] = useState()
 
     const submitForm = (e) => {
+        setIsLoading(true)
         e.preventDefault();
         // setIsLoading(true);cd
         console.log(csvFile, 'cssss');
@@ -20,8 +21,11 @@ const ProductUploadBulk = () => {
         console.log(formData, 'cssss');
         postProductBulk(formData).then((res) => {
             console.log(res, 'response');
+            toast.success('Products Uploaded')
         }).catch((res) => {
             console.log(res.response, 'error');
+        }).finally(()=>{
+            setIsLoading(false)
         })
 
     }
